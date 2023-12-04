@@ -24,10 +24,8 @@ Tetris with a twist
 #### Getting Started
 
 1. Clone the repository.
-	- **Copy code:** 
-
-		> git clone https://github.com/your-username/Tetris-With-A-Twist.git
-
+	```bash
+	git clone https://github.com/your-username/Tetris-With-A-Twist.git
 2. Open the project in Unity.
 3. Run the game and start stacking blocks on the farm.
 
