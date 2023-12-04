@@ -876,3 +876,4 @@ Received Import Request.
 Start importing Assets/Art/Blocks/Tile Blocks/Blocks Palette.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053c106168a17f7411005c4f72bc979a') in 0.002740 seconds 
   Import took 0.005976 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
