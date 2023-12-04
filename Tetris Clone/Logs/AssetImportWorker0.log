@@ -15,11 +15,11 @@ E:/Unity Projects/Tetris-Clone/Tetris Clone
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52763
+52131
 Successfully changed project path to: E:/Unity Projects/Tetris-Clone/Tetris Clone
 E:/Unity Projects/Tetris-Clone/Tetris Clone
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 43.48 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.49 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path E:/Unity Versions/Unity/Editor/Data/Resources/UnitySubsystems
@@ -30,130 +30,42 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 2060 (ID=0x1e89)
     Vendor:   
     VRAM:     5958 MB
-    Driver:   31.0.15.4601
+    Driver:   31.0.15.4617
 Initialize mono
 Mono path[0] = 'E:/Unity Versions/Unity/Editor/Data/Managed'
 Mono path[1] = 'E:/Unity Versions/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'E:/Unity Versions/Unity/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56780
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56340
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/Unity Versions/Unity/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001191 seconds.
+Registered in 0.001143 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 45.18 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.031 seconds
+- Completed reload, in  1.001 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003155 seconds.
+Registered in 0.003158 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 44.88 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 44.99 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.150 seconds
+- Completed reload, in  1.165 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
 Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2092 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 93.0 MB.
-System memory in use after: 93.1 MB.
+Unloading 2105 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.3 MB.
+System memory in use after: 95.3 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2529.
-Total: 2.345700 ms (FindLiveObjects: 0.249700 ms CreateObjectMapping: 0.050300 ms MarkObjects: 1.977400 ms  DeleteObjects: 0.066900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/Art/Font
-  artifactKey: Guid(aa16f6b6df667bb4a86e8fde23074843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Font using Guid(aa16f6b6df667bb4a86e8fde23074843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af54e9fb461b82c46bb25f599fed4520') in 0.004505 seconds 
-  Import took 0.007517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.686550 seconds.
-  path: Assets/Art/Backgrounds
-  artifactKey: Guid(652effc159b096244a97fc3fe549ec65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Backgrounds using Guid(652effc159b096244a97fc3fe549ec65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cfcec69a45151437f1f820b9ab65ec0') in 0.001561 seconds 
-  Import took 0.004655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.131872 seconds.
-  path: Assets/Art/Fonts
-  artifactKey: Guid(aa16f6b6df667bb4a86e8fde23074843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Fonts using Guid(aa16f6b6df667bb4a86e8fde23074843) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9c46333b9120b5a062379875f0ce329') in 0.001304 seconds 
-  Import took 0.004264 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.494916 seconds.
-  path: Assets/Art/Fonts/Candy Beans.otf
-  artifactKey: Guid(398fb2ec33f2a5141a50832b08ce955a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Fonts/Candy Beans.otf using Guid(398fb2ec33f2a5141a50832b08ce955a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c48998a10c7046a42f46103e3f0480e4') in 0.117080 seconds 
-  Import took 0.120202 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 43.830131 seconds.
-  path: Assets/Art/Fonts/Candy Beans SDF.asset
-  artifactKey: Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Fonts/Candy Beans SDF.asset using Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: 'a14d6659c46d9bde46e8e028ce7ff540') in 0.052202 seconds 
-  Import took 0.055450 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 52.936210 seconds.
-  path: Assets/Art/Fonts/Candy Beans SDF.asset
-  artifactKey: Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Fonts/Candy Beans SDF.asset using Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '82936aee1f5eb9d80cbc02757440fc09') in 0.026062 seconds 
-  Import took 0.029326 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 57.188753 seconds.
-  path: Assets/Art/Fonts/Candy Beans SDF.asset
-  artifactKey: Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Art/Fonts/Candy Beans SDF.asset using Guid(2fffcad4e070a94408b5d39ac406812e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Shader 'TextMeshPro/Distance Field': fallback shader 'TextMeshPro/Mobile/Distance Field' not found
- -> (artifact id: '7a91116d22201e72b1973e2fd830480e') in 0.030494 seconds 
-  Import took 0.033797 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003210 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.017 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2095 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 97.9 MB.
-System memory in use after: 97.5 MB.
-
-Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2578.
-Total: 2.349700 ms (FindLiveObjects: 0.195100 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.846600 ms  DeleteObjects: 0.256400 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2543.
+Total: 2.424300 ms (FindLiveObjects: 0.207200 ms CreateObjectMapping: 0.052700 ms MarkObjects: 2.074700 ms  DeleteObjects: 0.088100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -167,26 +79,800 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 109.370144 seconds.
-  path: Assets/Scenes/Game Scene.unity
-  artifactKey: Guid(14d4ad0eebb724740a052ba1efdea68a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Game Scene.unity using Guid(14d4ad0eebb724740a052ba1efdea68a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffa91fe920a896569908cec920cf114c') in 0.010741 seconds 
-  Import took 0.013851 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.107945 seconds.
-  path: Assets/Scenes/SampleScene.unity
-  artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/SampleScene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31e713db92d1b46e3f0bef93b400ab33') in 0.001592 seconds 
-  Import took 0.004548 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.909840 seconds.
   path: Assets/Scenes/Main Menu Scene.unity
   artifactKey: Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main Menu Scene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '43f8dbc5eb748394c3b4e1107c746c50') in 0.001517 seconds 
-  Import took 0.004521 seconds .
+Start importing Assets/Scenes/Main Menu Scene.unity using Guid(2cda990e2423bbf4892e6590ba056729) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae093d4274fcabba78efab92610fe99') in 0.012499 seconds 
+  Import took 0.015577 seconds .
 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file
+========================================================================
+Received Import Request.
+  Time since last request: 4.811292 seconds.
+  path: Assets/Art
+  artifactKey: Guid(1b3cd819cb075d34f8f266a43ec80d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art using Guid(1b3cd819cb075d34f8f266a43ec80d7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91a4f11a92f724015a1b691376500edc') in 0.001206 seconds 
+  Import took 0.004242 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.784713 seconds.
+  path: Assets/Art/Blocks
+  artifactKey: Guid(03db90ab059f9f44194bf4727d99ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks using Guid(03db90ab059f9f44194bf4727d99ace8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1260330c1fa6dfcc57d40107579fb451') in 0.001295 seconds 
+  Import took 0.004420 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.987875 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '777c4d22ca12307b8e9cdf85a60871b9') in 0.109839 seconds 
+  Import took 0.112953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e18f03786233553289e55579ec8956') in 0.006959 seconds 
+  Import took 0.009822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0b95f33acd3b209a2ffadce9fa11188') in 0.006770 seconds 
+  Import took 0.009770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '327113e694727318be795fb280dd70b1') in 0.006777 seconds 
+  Import took 0.010021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de99237f510c087e333df105a131b0bb') in 0.007083 seconds 
+  Import took 0.009927 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13cf4444ffeedcff532d5e9a177ede0d') in 0.006538 seconds 
+  Import took 0.009380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '06194d2e9dfe03f78233e131744ba69e') in 0.006637 seconds 
+  Import took 0.009600 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000213 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13cf4444ffeedcff532d5e9a177ede0d') in 0.006420 seconds 
+  Import took 0.009493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.023638 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(a521fb620cbfa174393de7807514750a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(a521fb620cbfa174393de7807514750a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '115d099fbbc219d37c6fe52372649a80') in 0.001451 seconds 
+  Import took 0.004610 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 51.839805 seconds.
+  path: Assets/Art/Backgrounds/Background.png
+  artifactKey: Guid(134033a9400c69b46a0bf8a7017c6bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Backgrounds/Background.png using Guid(134033a9400c69b46a0bf8a7017c6bb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbf7b4f5e954d1dd044cfdb1e388d25a') in 0.010770 seconds 
+  Import took 0.013884 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Art/Backgrounds/Tetris Guide.png
+  artifactKey: Guid(86b38f6985eac8f4ebe664881f0886c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Backgrounds/Tetris Guide.png using Guid(86b38f6985eac8f4ebe664881f0886c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82271e4e601c1dd3ec04aa9e4c1ad7a4') in 0.006774 seconds 
+  Import took 0.009546 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 35.773477 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f1809f8ef5d84cc3cd2cf74862f2249') in 0.027369 seconds 
+  Import took 0.030467 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000192 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e45bd743fbca7d1b49a1fabce2945b21') in 0.067711 seconds 
+  Import took 0.070438 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b9b2e60e24584c949745960c163d2a33') in 0.038749 seconds 
+  Import took 0.041557 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eac2f411c4aae51516adf37e67d423f2') in 0.051669 seconds 
+  Import took 0.054638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000151 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4837fdfd8349d4abd7558a54adee9397') in 0.019329 seconds 
+  Import took 0.022160 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000198 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0d440ed059528c0dc49d8ab215343f') in 0.016621 seconds 
+  Import took 0.019980 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cd6b8f9aa8af0ee566c47a183622f04') in 0.020205 seconds 
+  Import took 0.023039 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.809601 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '079123f7c927974e1d79d70577f402b8') in 0.037528 seconds 
+  Import took 0.040656 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db2053261399bba3dcb0a27e4ce73fa4') in 0.043298 seconds 
+  Import took 0.046108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000157 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b3a96f2044b81339fdeea6418c7ff58') in 0.047378 seconds 
+  Import took 0.050211 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000174 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418faff475242181236b133efcde997d') in 0.051899 seconds 
+  Import took 0.054881 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b7bb7f7994aafe5b669e8ae177d23c0') in 0.011405 seconds 
+  Import took 0.014547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a65fc6ea837e4dee08c48506c2f745f') in 0.035038 seconds 
+  Import took 0.037970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000144 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d02ba415cfaafcbc0afa14b52cbe3a4') in 0.018931 seconds 
+  Import took 0.021897 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.008006 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d02ba415cfaafcbc0afa14b52cbe3a4') in 0.013047 seconds 
+  Import took 0.016205 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.730482 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ebdebbf015a2b480aacf04d1cd36340') in 0.043694 seconds 
+  Import took 0.046906 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46c1202a207199e901da7f285e1bbc69') in 0.068306 seconds 
+  Import took 0.071136 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b90270da465f03c13abbfea6e652c6c5') in 0.046664 seconds 
+  Import took 0.049867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9079ba28f0fe202dabac0e6028de1b87') in 0.094892 seconds 
+  Import took 0.097697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000169 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b90270da465f03c13abbfea6e652c6c5') in 0.017588 seconds 
+  Import took 0.020822 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c44954b7cb102a4d11632d5c5260636') in 0.006881 seconds 
+  Import took 0.010150 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27fac10ee5fbfc0b1abb7afc2d2b62c9') in 0.006185 seconds 
+  Import took 0.009056 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e6a5ec41edc2ba45144366cc26e2399') in 0.006769 seconds 
+  Import took 0.009738 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 225.950355 seconds.
+  path: Assets/Art/Blocks/Square.png
+  artifactKey: Guid(bf49ef2031218ea4099a49b543272cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Square.png using Guid(bf49ef2031218ea4099a49b543272cce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6980a26470f396a833d1ad3b98ceb6ba') in 0.011559 seconds 
+  Import took 0.014749 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2108.309920 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ff9e299cc9c713d696be323ce8a4415') in 0.019458 seconds 
+  Import took 0.022801 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000183 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b312dc972ccb0b8a4932223e8dd53fa0') in 0.005885 seconds 
+  Import took 0.008766 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94db114d54d1f4b66f430fda9ebfe2f3') in 0.008689 seconds 
+  Import took 0.011733 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f7503502e7a8503a34f01f4bbfd9ff0') in 0.007456 seconds 
+  Import took 0.010518 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d3811b06751c670ea0defabc970bfa2') in 0.006424 seconds 
+  Import took 0.009588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000204 seconds.
+  path: Assets/Art/Blocks/Tetris Grid.png
+  artifactKey: Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid.png using Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00d1812fbddc95ee845618200be81ade') in 0.009416 seconds 
+  Import took 0.012670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '307aa652bbcb0d5c161f3e768c2c7571') in 0.006685 seconds 
+  Import took 0.010248 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3006b7c5c0dfdb4488c9e11879727663') in 0.006799 seconds 
+  Import took 0.009971 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 50.283687 seconds.
+  path: Assets/Scenes/Game Scene.unity
+  artifactKey: Guid(14d4ad0eebb724740a052ba1efdea68a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Game Scene.unity using Guid(14d4ad0eebb724740a052ba1efdea68a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14b4734ea4e9187abe430e346aada0eb') in 0.001590 seconds 
+  Import took 0.004812 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 29.524896 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '38fe5b6f6fbdeeb96136e1611c259817') in 0.061308 seconds 
+  Import took 0.064449 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '253036e4342551d6f34b6b2efffe0746') in 0.074594 seconds 
+  Import took 0.077863 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8a3f62e533b9bee33d4daaa76f23a1') in 0.045029 seconds 
+  Import took 0.047815 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8d484273544a528d48267b9f039d0ce') in 0.024140 seconds 
+  Import took 0.027102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dadd8ae6c52a1b49cab8c9ef364a3bc5') in 0.007324 seconds 
+  Import took 0.010159 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Art/Blocks/Tetris Grid.png
+  artifactKey: Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid.png using Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2454e73b82543d7b05e183fcbf1f169') in 0.014070 seconds 
+  Import took 0.017194 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '185f7b1e27d0b836716639a9a0f8e556') in 0.013494 seconds 
+  Import took 0.016495 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000188 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa747ee0e7a4e752ce3a1c3fbe8f97c6') in 0.017840 seconds 
+  Import took 0.020761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.923902 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2220f7ff169bc14850947da587c7cedb') in 0.036952 seconds 
+  Import took 0.040488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000200 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6dad1d5b802b678db6075b37ecb8c0') in 0.007257 seconds 
+  Import took 0.010868 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f86c7150c3ac6ea8e0996b33014e78e3') in 0.005869 seconds 
+  Import took 0.008821 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000162 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc694001faea146da86b40a3c2ceb96a') in 0.005231 seconds 
+  Import took 0.008787 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000229 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f41c7111796e8e2b99b3f8cf8464d5e') in 0.005019 seconds 
+  Import took 0.008077 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Art/Blocks/Tetris Grid.png
+  artifactKey: Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid.png using Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7cdae1e450b7596636aafcc3d80f1daf') in 0.005159 seconds 
+  Import took 0.008006 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000194 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01bc65061136db5cb874c6dc07c16165') in 0.005022 seconds 
+  Import took 0.008074 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b3ecdd5954ab06faee3f70ef2e09f27') in 0.005097 seconds 
+  Import took 0.008204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 26.532606 seconds.
+  path: Assets/Art/Blocks/Broccoli Block.png
+  artifactKey: Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Broccoli Block.png using Guid(1b9ad2a1c9ec81444830c5a8b143deb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd0a24495b1d26780831bf63dda0d8cc') in 0.014569 seconds 
+  Import took 0.017746 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000196 seconds.
+  path: Assets/Art/Blocks/Eggplant Block.png
+  artifactKey: Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Eggplant Block.png using Guid(1795f43362ffc844a9e3da4cfcbcd42d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c1b3a996c8d28703bb2d0af4e221b11') in 0.035414 seconds 
+  Import took 0.038718 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000215 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a5376571386493e5875f7a9a34c9e2d') in 0.032402 seconds 
+  Import took 0.035488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000336 seconds.
+  path: Assets/Art/Blocks/Corn Block.png
+  artifactKey: Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Corn Block.png using Guid(0e5411b868671754082076599d922a59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1b5253b0b1efcedcb37ca87b006ad82') in 0.005571 seconds 
+  Import took 0.008650 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000184 seconds.
+  path: Assets/Art/Blocks/Carrot Block.png
+  artifactKey: Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Carrot Block.png using Guid(c8126f08ac5c44a4081b8aebaa631602) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a5376571386493e5875f7a9a34c9e2d') in 0.005088 seconds 
+  Import took 0.008218 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/Art/Blocks/Mushroom Block.png
+  artifactKey: Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Mushroom Block.png using Guid(66b8d84901faf6747a85173dc3bbcb22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '067ba5ac7468d621a83daea92ad2697a') in 0.005120 seconds 
+  Import took 0.008613 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000199 seconds.
+  path: Assets/Art/Blocks/Tetris Grid.png
+  artifactKey: Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid.png using Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e26a02dc8a7cb663cc5fcec7260e83a5') in 0.005110 seconds 
+  Import took 0.008112 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000171 seconds.
+  path: Assets/Art/Blocks/Tomato Block.png
+  artifactKey: Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tomato Block.png using Guid(f5062c7bf61cc744796845039180baf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8f4d7bf0cfabe689347d4644cb0f04e') in 0.004632 seconds 
+  Import took 0.007529 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/Art/Blocks/Potato Block.png
+  artifactKey: Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Potato Block.png using Guid(cba5fbe93fd57af44867a4e6b44ce682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aa7c8ac90818d8fe2d5c0e7e1ad193eb') in 0.005306 seconds 
+  Import took 0.008115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 230.183233 seconds.
+  path: Assets/Art/Blocks/Tetris Grid 1.png
+  artifactKey: Guid(b3df9649a5d355941aa7e029934231e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid 1.png using Guid(b3df9649a5d355941aa7e029934231e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69ee7499d4063bef2508ee3366b8d30d') in 0.006366 seconds 
+  Import took 0.009670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.097685 seconds.
+  path: Assets/Art/Blocks/Tetris Grid.png
+  artifactKey: Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tetris Grid.png using Guid(b3193c3befadc3640a5168f9d3f45f83) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02ae4a4f3462333a5eea164754c5dd2c') in 0.004986 seconds 
+  Import took 0.008063 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 539.765932 seconds.
+  path: Assets/Art/Blocks/Tile Blocks
+  artifactKey: Guid(aa87c241d915a81469261c4ee74fa294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks using Guid(aa87c241d915a81469261c4ee74fa294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fa5f616013e38de91362105d6beb711c') in 0.001322 seconds 
+  Import took 0.004570 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 38.928216 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a5c3ee5e49b622a2849e35906548e2') in 0.011765 seconds 
+  Import took 0.015060 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.219465 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f42e12af38ee82d590801f0909286cac') in 0.002481 seconds 
+  Import took 0.005479 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000148 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Mushroom Block.asset
+  artifactKey: Guid(96ba7206a07b78844985b5968c2fb8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Mushroom Block.asset using Guid(96ba7206a07b78844985b5968c2fb8a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4599b5b60cc0ba9758ede4e9a5e4c502') in 0.018451 seconds 
+  Import took 0.021236 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000279 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Carrot Block.asset
+  artifactKey: Guid(82cf7a45f609e624a82ed0097595e4d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Carrot Block.asset using Guid(82cf7a45f609e624a82ed0097595e4d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a06f2820565735480a59b379cab48202') in 0.004662 seconds 
+  Import took 0.007802 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Eggplant Block.asset
+  artifactKey: Guid(0a49390855f9df64dba3c861c2bd5571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Eggplant Block.asset using Guid(0a49390855f9df64dba3c861c2bd5571) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '08510b5718fe1580550397897f837ac6') in 0.009532 seconds 
+  Import took 0.012799 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Corn Block.asset
+  artifactKey: Guid(2fbb390eff6d24a49a9361b9346549ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Corn Block.asset using Guid(2fbb390eff6d24a49a9361b9346549ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a11d89567f88f8b659104b2ab254e69') in 0.005906 seconds 
+  Import took 0.009049 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000191 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Tomato Block.asset
+  artifactKey: Guid(3c63cf9fb42e50a4aa0d0d41f8cf6984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Tomato Block.asset using Guid(3c63cf9fb42e50a4aa0d0d41f8cf6984) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce15c842afb178fb8fb3e6024a70f3b5') in 0.013962 seconds 
+  Import took 0.016983 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000170 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Broccoli Block.asset
+  artifactKey: Guid(9464b0a308eca7d4c9bd93e65c58dbac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Broccoli Block.asset using Guid(9464b0a308eca7d4c9bd93e65c58dbac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c00b6c50be36eedef2ed3e65fcc0288') in 0.006423 seconds 
+  Import took 0.009889 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000166 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Potato Block.asset
+  artifactKey: Guid(d71347a6372dc0d419f36f810217fa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Potato Block.asset using Guid(d71347a6372dc0d419f36f810217fa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccc4d92eee897dfdc91753eeaab1cc8a') in 0.008891 seconds 
+  Import took 0.011862 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 42.097842 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4cd8c145b08a8711e10f34e247d91cd1') in 0.002858 seconds 
+  Import took 0.005975 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.870937 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e7aea8ac39bc121265344d1193e15bc') in 0.002498 seconds 
+  Import took 0.005544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.417075 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f58ff09860c897ae5327d87ca95cf446') in 0.002488 seconds 
+  Import took 0.005473 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 33.163421 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dbe5f0cccf1c4b9716e2f05687a10b4d') in 0.002655 seconds 
+  Import took 0.005745 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 58.204503 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6af8f70bbac8f6f66da0e0d1258906c8') in 0.002592 seconds 
+  Import took 0.005690 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.445891 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '112b93141a115e43f0eb096369de1400') in 0.002568 seconds 
+  Import took 0.005660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.731652 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1aa65357ba2a2ab8f84f64730c120255') in 0.002506 seconds 
+  Import took 0.005521 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.000351 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5689434e742f3a2b4d97f020c788233d') in 0.002475 seconds 
+  Import took 0.005532 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.447728 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb2f042f2838014ee66b32fe511bb0a1') in 0.002618 seconds 
+  Import took 0.005729 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.800613 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb1b0193233ae4c60661ec2622c43e21') in 0.002496 seconds 
+  Import took 0.005474 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.392111 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c0427a4c8987a026e4cddc3cd2a26d7') in 0.003889 seconds 
+  Import took 0.006957 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 36.799217 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba59ce6f054a835a4d8e160fd848f8d') in 0.002573 seconds 
+  Import took 0.005602 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.111299 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db891636417306e3f3c29b02a10551ac') in 0.002699 seconds 
+  Import took 0.005832 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 79.361423 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51dec70b01695f7891caf00f625e2e20') in 0.004187 seconds 
+  Import took 0.007599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.649497 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bff93c8fd650b93ea4e4450a6f274b76') in 0.002545 seconds 
+  Import took 0.005654 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 136.981018 seconds.
+  path: Assets/Art/Blocks/Tile Blocks/Blocks Palette.prefab
+  artifactKey: Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Art/Blocks/Tile Blocks/Blocks Palette.prefab using Guid(5f5c6f6f20b32b142890508be9809a8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053c106168a17f7411005c4f72bc979a') in 0.002740 seconds 
+  Import took 0.005976 seconds .
+
