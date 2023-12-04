@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638366803277104634
-    m_Hash: 3065361583
+      ticks: 638372695507272251
+    m_Hash: 1772149776
   m_LockFileStatus:
     m_FilePath: E:/Unity Projects/Tetris-Clone/Tetris Clone/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638366803277150953
-    m_Hash: 489616767
+      ticks: 638372695507272251
+    m_Hash: 2078407203
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:

@@ -12,9 +12,11 @@ Tetracrop is a personal project that injects a delightful twist into the classic
 **How to Play**
 1. **Objective:** Clear lines by stacking blocks to make them disappear.
 2. **Controls:**
-	- Left/Right Arrow Keys: Move the falling block horizontally.
-	- Down Arrow Key: Accelerate the block's descent.
-	- Up Arrow Key: Rotate the falling block.
+	- **Arrow Keys or WASD:**
+		- **[W] or Up Arrow Key:** Rotate the falling block.
+		- **[A] or Left Key and [D] or Right Key:** Move the falling block horizontally.
+		- **[S] or Down Key:** Accelerate the block's descent.
+	- **Space Bar:** Instantly drop the falling block.	
 3. **Scoring:**
 	- **Line Clear:** Earn points for each line cleared.
 	- **Vegetable Explosions:** Create powerful explosions by connecting 12 blocks of popular vegetables like Carrots, Potatoes, and more, adding an exciting scoring mechanic.
@@ -30,4 +32,4 @@ Tetracrop is a personal project that injects a delightful twist into the classic
 - **Developer:** Angelico Josef P. Vasquez
 - **Contact:** ajpv0231@gmail.com
 
-Feel free to contribute, report issues, or suggest enhancements. Happy farming and stacking! 🌾🧱
+Feel free to contribute, report issues, or suggest enhancements. Happy farming and stacking! 🌾🥕🥔
