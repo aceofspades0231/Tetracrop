@@ -2,7 +2,7 @@
 Tetris with a twist
 
 **Overview**
-Tetracrop is a personal project that injects a delightful twist into the classic Tetris gameplay. Set in a charming farm theme, this game introduces unique features, including explosive vegetable combinations for exciting scoring opportunities.
+	- Tetracrop is a personal project that injects a delightful twist into the classic Tetris gameplay. Set in a charming farm theme, this game introduces unique features, including explosive vegetable combinations for exciting scoring opportunities.
 
 **Features**
 - **Classic Tetris Gameplay:** Enjoy the timeless fun of Tetris with a familiar twist.
