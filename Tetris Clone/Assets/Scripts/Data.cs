@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class Data
 {
+    // Sets the rotation of the Pieces
     public static readonly float cos = Mathf.Cos(Mathf.PI / 2f);
     public static readonly float sin = Mathf.Sin(Mathf.PI / 2f);
     public static readonly float[] RotationMatrix = new float[] { cos, sin, -sin, cos };
 
+    // Collections of Pieces, sets the shapes of th pieces
     public static readonly Dictionary<Tetromino, Vector2Int[]> Cells = new Dictionary<Tetromino, Vector2Int[]>()
     {
         { Tetromino.Carrot, new Vector2Int[] { new Vector2Int(-1, 1), new Vector2Int( 0, 1), new Vector2Int( 1, 1), new Vector2Int( 2, 1) } },
