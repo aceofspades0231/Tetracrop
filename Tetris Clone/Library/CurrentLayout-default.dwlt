@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 127
+  controlID: 94
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 60
+  controlID: 95
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 61
+  controlID: 96
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -317,22 +317,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Blocks/Tile Blocks
+    - Assets/Art/Backgrounds
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Blocks/Tile Blocks
+  - Assets/Art/Backgrounds
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Projects\Tetris-Clone\Tetris Clone
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: cc450000
-    m_LastClickedID: 17868
-    m_ExpandedIDs: 00000000e6420000ee4200005643000000ca9a3b
+    m_SelectedIDs: 8c420000
+    m_LastClickedID: 17036
+    m_ExpandedIDs: 00000000604200007e4200008a42000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -360,7 +360,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000e6420000
+    m_ExpandedIDs: 0000000060420000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -481,23 +481,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d0450000
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: eaeafffff4eeffff80f7ffff3efafffffafaffff
+      m_ExpandedIDs: 42fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Gameboard
-        m_OriginalName: Gameboard
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -4364
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 4}
       m_SearchString: 
@@ -543,9 +543,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.4856365, y: 0.3272862, z: -1.7720321}
+    m_Target: {x: 3.3163779, y: 1.3674836, z: -2.2933028}
     speed: 2
-    m_Value: {x: 0.32, y: -0.96, z: 0}
+    m_Value: {x: 3.1850677, y: 1.1650472, z: -2.256767}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -596,9 +596,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.058163
+    m_Target: 8.484426
     speed: 2
-    m_Value: 1.357645
+    m_Value: 8.119067
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -705,7 +705,7 @@ MonoBehaviour:
       width: 2140.975
       height: 768
     m_MinimalGUI: 1
-  m_defaultScale: 0.78515625
+  m_defaultScale: 0.8125
   m_LastWindowPixelSize: {x: 1681, y: 624}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
