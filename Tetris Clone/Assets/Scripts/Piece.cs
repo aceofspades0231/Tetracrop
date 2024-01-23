@@ -1,5 +1,5 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 
 public class Piece : MonoBehaviour
 {
@@ -14,12 +14,25 @@ public class Piece : MonoBehaviour
     public float stepDelay = 1f;
     public float lockDelay = 0.5f;
 
+    public int score = 0;
+    // Increase level if player reach an increment score of 500 (e.g 1000, 1500)
+    private int scoreThreshold = 500;
+    private int previousScore;
+
+    public int level = 1;
+
     private float stepTime;
     private float lockTime;
 
     // Plays sound effect
     public AudioClip soundClip;
     public AudioSource audioSource;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI levelText;
+
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -48,12 +61,15 @@ public class Piece : MonoBehaviour
 
     public void Update()
     {
-        this.board.Clear(this);
-
-        this.lockTime += Time.deltaTime;
-
         if (!menu.gameIsPaused)
         {
+            scoreText.text = score.ToString();
+            levelText.text = level.ToString();
+
+            this.board.Clear(this);
+
+            this.lockTime += Time.deltaTime;
+
             // Rotation of the Piece
             if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
             {
@@ -76,6 +92,7 @@ public class Piece : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 audioSource.Play();
+                score++;
                 Move(Vector2Int.down);
             }
 
@@ -83,6 +100,13 @@ public class Piece : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 HardDrop();
+            }
+
+            if (score >= previousScore + scoreThreshold)
+            {
+                LevelIncrement();
+
+                previousScore = score / scoreThreshold * scoreThreshold;
             }
 
             if (Time.time >= this.stepTime)
@@ -94,14 +118,23 @@ public class Piece : MonoBehaviour
         }        
     }
 
+    private void LevelIncrement()
+    {
+        if(level <= 10)
+        {
+            level++;
+        }        
+    }
+
     private void Step()
     {
         this.stepTime = Time.time + stepDelay;
 
         Move(Vector2Int.down);
+        score++;
 
         if (this.lockTime >= this.lockDelay)
-        {
+        {            
             Lock();
         }
     }
@@ -136,6 +169,7 @@ public class Piece : MonoBehaviour
 
         while (Move(Vector2Int.down)) 
         {
+            score++;
             continue;
         }
 

@@ -8,26 +8,28 @@ public class Menu : MonoBehaviour
     // Check if the game is Paused
     public bool gameIsPaused = true;
 
-    private Canvas canvas;
-
-    private void Start()
-    {
-        canvas = GetComponent<Canvas>();
-    }
+    public Canvas mainMenuCanvas;
+    public Canvas pausedCanvas;
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            // Toggle the boolean variable
             gameIsPaused = !gameIsPaused;
+            pausedCanvas.gameObject.SetActive(true);
         }
     }
 
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
-        canvas.gameObject.SetActive(false);
+        mainMenuCanvas.gameObject.SetActive(false);
+    }
+
+    public void ResumeGame()
+    {
+        gameIsPaused = !gameIsPaused;
+        pausedCanvas.gameObject.SetActive(false);
     }
 
     public void ExitGame()

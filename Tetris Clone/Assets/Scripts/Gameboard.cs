@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.Tilemaps;
 
 public class Gameboard : MonoBehaviour
@@ -7,8 +8,14 @@ public class Gameboard : MonoBehaviour
     public TetrominoData[] tetrominoes;
     public Piece activePiece {  get; private set; }
 
+    public Menu menu;
+
     public Vector3Int spawnPosition;
     public Vector2Int boardSize = new Vector2Int(10, 20);
+
+    // Plays sound effect
+    public AudioClip soundClip;
+    public AudioSource audioSource;
 
     public RectInt Bounds { 
         get
@@ -32,6 +39,7 @@ public class Gameboard : MonoBehaviour
     private void Start()
     {
         SpawnPiece();
+        audioSource.clip = soundClip;
     }
 
     public void SpawnPiece()
@@ -107,13 +115,15 @@ public class Gameboard : MonoBehaviour
         {
             if (isLineFull(row))
             {
+                audioSource.Play();
+                activePiece.score += 100;
                 LineClear(row);
             }
             else
             {
                 row++;
             }
-        }
+        }        
     }
 
     // Checks if the row is full and can be cleared
