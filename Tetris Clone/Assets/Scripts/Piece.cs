@@ -8,12 +8,20 @@ public class Piece : MonoBehaviour
     public Vector3Int[] cells { get; private set; }
     public int rotationIndex { get; private set; }
 
+    public float stepDelay = 1f;
+    public float lockDelay = 0.5f;
+
+    private float stepTime;
+    private float lockTime;
+
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
         this.board = board;
         this.spawnPosition = spawnPosition;
         this.data = data;
         this.rotationIndex = 0;
+        stepTime = Time.time + this.stepDelay;
+        lockTime = 0f;
 
         if(this.cells == null)
         {
@@ -29,6 +37,8 @@ public class Piece : MonoBehaviour
     public void Update()
     {
         this.board.Clear(this);
+
+        this.lockTime += Time.deltaTime;
 
         // Rotation of the Piece
         if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
@@ -58,8 +68,32 @@ public class Piece : MonoBehaviour
             HardDrop();
         }
 
+        if(Time.time >= this.stepTime)
+        {
+            Step();
+        }
+
         this.board.Set(this);
-    }    
+    }
+
+    private void Step()
+    {
+        this.stepTime = Time.time + stepDelay;
+
+        Move(Vector2Int.down);
+
+        if (this.lockTime >= this.lockDelay)
+        {
+            Lock();
+        }
+    }
+
+    private void Lock()
+    {
+        this.board.Set(this);
+        this.board.ClearLines();
+        this.board.SpawnPiece();
+    }
     
     private bool Move(Vector2Int translation)
     {
@@ -72,6 +106,7 @@ public class Piece : MonoBehaviour
         if(valid)
         {
             this.spawnPosition = newPosition;
+            this.lockTime = 0f;
         }
 
         return valid;
@@ -83,6 +118,8 @@ public class Piece : MonoBehaviour
         {
             continue;
         }
+
+        Lock();
     }
 
     // Function to activate the rotation of piece and wall kicks

@@ -6,7 +6,7 @@ public class Gameboard : MonoBehaviour
     public Tilemap tilemap {  get; private set; }
     public TetrominoData[] tetrominoes;
     public Piece activePiece {  get; private set; }
-    public Vector3Int position;
+    public Vector3Int spawnPosition;
     public Vector2Int boardSize = new Vector2Int(10, 20);
 
     public RectInt Bounds { 
@@ -33,13 +33,27 @@ public class Gameboard : MonoBehaviour
         SpawnPiece();
     }
 
-    private void SpawnPiece()
+    public void SpawnPiece()
     {
         int random = Random.Range(0, this.tetrominoes.Length);
         TetrominoData data = this.tetrominoes[random];
 
-        this.activePiece.Initialized(this, this.position, data);
-        Set(this.activePiece);
+        this.activePiece.Initialized(this, this.spawnPosition, data);
+
+        // If Pieces reach the spawnPosition the game will be over
+        if (IsValidPosition(this.activePiece, this.spawnPosition))
+        {
+            Set(this.activePiece);
+        }
+        else
+        {
+            GameOver();
+        }
+    }
+
+    private void GameOver()
+    {
+        this.tilemap.ClearAllTiles();
     }
 
     public void Set(Piece piece)
@@ -81,5 +95,67 @@ public class Gameboard : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void ClearLines()
+    {
+        RectInt bounds = this.Bounds;
+        int row = bounds.yMin;
+
+        while (row < bounds.yMax)
+        {
+            if (isLineFull(row))
+            {
+                LineClear(row);
+            }
+            else
+            {
+                row++;
+            }
+        }
+    }
+
+    // Checks if the row is full and can be cleared
+    private bool isLineFull(int row)
+    {
+        RectInt bounds = this.Bounds;
+
+        for (int col = bounds.xMin; col < bounds.xMax; col++)
+        {
+            Vector3Int position = new Vector3Int(col, row, 0);
+
+            if(!this.tilemap.HasTile(position)) 
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    // Clears whole line and make the above row fall down
+    private void LineClear(int row)
+    {
+        RectInt bounds = this.Bounds;
+
+        for (int col = bounds.xMin; col < bounds.xMax; col++)
+        {
+            Vector3Int position = new Vector3Int(col, row, 0);
+            this.tilemap.SetTile(position, null);
+        }
+
+        while (row < bounds.yMax)
+        {
+            for (int col = bounds.xMin; col < bounds.xMax; col++)
+            {
+                Vector3Int position = new Vector3Int(col, row + 1, 0);
+                TileBase above = this.tilemap.GetTile(position);
+
+                position = new Vector3Int(col, row, 0);
+                this.tilemap.SetTile(position, above);
+            }
+
+            row++;
+        }
     }
 }

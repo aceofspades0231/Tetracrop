@@ -9,6 +9,9 @@ Tetris with a twist
 - **Farm Theme:** Immerse yourself in a delightful farm atmosphere while stacking blocks.
 - **Vegetable Explosions:** Create powerful explosions by connecting 12 blocks of the same color (vegetable), adding an exciting scoring mechanic.
 
+#### Unity Version
+- Developed using **Unity 2020.3.13f1**
+
 #### How to Play
 1. **Objective:** Clear lines by stacking blocks to make them disappear.
 2. **Controls:**
