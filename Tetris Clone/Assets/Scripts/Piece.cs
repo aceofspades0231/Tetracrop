@@ -3,7 +3,7 @@ using UnityEngine;
 public class Piece : MonoBehaviour
 {
     public Gameboard board {  get; private set; }
-    public Vector3Int spawnPosition {  get; private set; }
+    public Vector3Int position {  get; private set; }
     public TetrominoData data { get; private set; }
     public Vector3Int[] cells { get; private set; }
     public int rotationIndex { get; private set; }
@@ -17,7 +17,7 @@ public class Piece : MonoBehaviour
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
         this.board = board;
-        this.spawnPosition = spawnPosition;
+        this.position = spawnPosition;
         this.data = data;
         this.rotationIndex = 0;
         stepTime = Time.time + this.stepDelay;
@@ -97,7 +97,7 @@ public class Piece : MonoBehaviour
     
     private bool Move(Vector2Int translation)
     {
-        Vector3Int newPosition = this.spawnPosition;
+        Vector3Int newPosition = this.position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
 
@@ -105,7 +105,7 @@ public class Piece : MonoBehaviour
 
         if(valid)
         {
-            this.spawnPosition = newPosition;
+            this.position = newPosition;
             this.lockTime = 0f;
         }
 

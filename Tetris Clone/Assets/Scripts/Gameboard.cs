@@ -60,7 +60,7 @@ public class Gameboard : MonoBehaviour
     {
         for(int i = 0; i < piece.cells.Length; i++)
         {
-            Vector3Int tilePosition = piece.cells[i] + piece.spawnPosition;
+            Vector3Int tilePosition = piece.cells[i] + piece.position;
             this.tilemap.SetTile(tilePosition, piece.data.tile);
         }
     }
@@ -69,7 +69,7 @@ public class Gameboard : MonoBehaviour
     {
         for (int i = 0; i < piece.cells.Length; i++)
         {
-            Vector3Int tilePosition = piece.cells[i] + piece.spawnPosition;
+            Vector3Int tilePosition = piece.cells[i] + piece.position;
             this.tilemap.SetTile(tilePosition, null);
         }
     }
