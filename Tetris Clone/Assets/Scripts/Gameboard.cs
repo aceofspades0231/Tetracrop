@@ -6,6 +6,7 @@ public class Gameboard : MonoBehaviour
     public Tilemap tilemap {  get; private set; }
     public TetrominoData[] tetrominoes;
     public Piece activePiece {  get; private set; }
+
     public Vector3Int spawnPosition;
     public Vector2Int boardSize = new Vector2Int(10, 20);
 

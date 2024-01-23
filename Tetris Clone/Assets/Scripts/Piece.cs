@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class Piece : MonoBehaviour
 {
@@ -8,11 +9,17 @@ public class Piece : MonoBehaviour
     public Vector3Int[] cells { get; private set; }
     public int rotationIndex { get; private set; }
 
+    public Menu menu;
+
     public float stepDelay = 1f;
     public float lockDelay = 0.5f;
 
     private float stepTime;
     private float lockTime;
+
+    // Plays sound effect
+    public AudioClip soundClip;
+    public AudioSource audioSource;
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -23,7 +30,7 @@ public class Piece : MonoBehaviour
         stepTime = Time.time + this.stepDelay;
         lockTime = 0f;
 
-        if(this.cells == null)
+        if (this.cells == null)
         {
             this.cells = new Vector3Int[data.cells.Length];
         }
@@ -34,46 +41,57 @@ public class Piece : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        audioSource.clip = soundClip;
+    }
+
     public void Update()
     {
         this.board.Clear(this);
 
         this.lockTime += Time.deltaTime;
 
-        // Rotation of the Piece
-        if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        if (!menu.gameIsPaused)
         {
-            Rotate(1);
-        }
+            // Rotation of the Piece
+            if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
+            {
+                Rotate(1);
+            }
 
-        // Left and Right Piece Movement
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Move(Vector2Int.left);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Move(Vector2Int.right);
-        }
+            // Left and Right Piece Movement
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                audioSource.Play();
+                Move(Vector2Int.left);
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                audioSource.Play();
+                Move(Vector2Int.right);
+            }
 
-        // Soft drop
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(Vector2Int.down);
-        }
+            // Soft drop
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                audioSource.Play();
+                Move(Vector2Int.down);
+            }
 
-        // Hard drop
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            HardDrop();
-        }
+            // Hard drop
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                HardDrop();
+            }
 
-        if(Time.time >= this.stepTime)
-        {
-            Step();
-        }
+            if (Time.time >= this.stepTime)
+            {
+                Step();
+            }
 
-        this.board.Set(this);
+            this.board.Set(this);
+        }        
     }
 
     private void Step()
@@ -101,9 +119,9 @@ public class Piece : MonoBehaviour
         newPosition.x += translation.x;
         newPosition.y += translation.y;
 
-        bool valid = this.board.IsValidPosition(this, newPosition);
+        bool valid = this.board.IsValidPosition(this, newPosition);        
 
-        if(valid)
+        if (valid)
         {
             this.position = newPosition;
             this.lockTime = 0f;
@@ -114,7 +132,9 @@ public class Piece : MonoBehaviour
 
     private void HardDrop()
     {
-        while(Move(Vector2Int.down)) 
+        audioSource.Play();
+
+        while (Move(Vector2Int.down)) 
         {
             continue;
         }
