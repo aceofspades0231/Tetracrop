@@ -2668,9 +2668,11 @@ MonoBehaviour:
   stepDelay: 1
   lockDelay: 0.5
   score: 0
+  level: 1
   soundClip: {fileID: 8300000, guid: e8b9492dc5e05ba4bb6191f974fe48f1, type: 3}
   audioSource: {fileID: 1734585701}
   scoreText: {fileID: 1902495789}
+  levelText: {fileID: 769547568}
 --- !u!1 &1442171662
 GameObject:
   m_ObjectHideFlags: 0
