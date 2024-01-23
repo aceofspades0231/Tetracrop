@@ -1,21 +1,49 @@
+using TMPro;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
 {
     public Gameboard board {  get; private set; }
-    public Vector3Int spawnPosition {  get; private set; }
+    public Vector3Int position {  get; private set; }
     public TetrominoData data { get; private set; }
     public Vector3Int[] cells { get; private set; }
     public int rotationIndex { get; private set; }
 
+    public Menu menu;
+
+    public float stepDelay = 1f;
+    public float lockDelay = 0.5f;
+
+    public int score = 0;
+    // Increase level if player reach an increment score of 500 (e.g 1000, 1500)
+    private int scoreThreshold = 500;
+    private int previousScore;
+
+    public int level = 1;
+
+    private float stepTime;
+    private float lockTime;
+
+    // Plays sound effect
+    public AudioClip soundClip;
+    public AudioSource audioSource;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+    [SerializeField]
+    private TextMeshProUGUI levelText;
+
+
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
         this.board = board;
-        this.spawnPosition = spawnPosition;
+        this.position = spawnPosition;
         this.data = data;
         this.rotationIndex = 0;
+        stepTime = Time.time + this.stepDelay;
+        lockTime = 0f;
 
-        if(this.cells == null)
+        if (this.cells == null)
         {
             this.cells = new Vector3Int[data.cells.Length];
         }
@@ -26,52 +54,110 @@ public class Piece : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        audioSource.clip = soundClip;
+    }
+
     public void Update()
     {
-        this.board.Clear(this);
-
-        // Rotation of the Piece
-        if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
+        if (!menu.gameIsPaused)
         {
-            Rotate(1);
-        }
+            scoreText.text = score.ToString();
+            levelText.text = level.ToString();
 
-        // Left and Right Piece Movement
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Move(Vector2Int.left);
-        }
-        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Move(Vector2Int.right);
-        }
+            this.board.Clear(this);
 
-        // Soft drop
-        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            Move(Vector2Int.down);
-        }
+            this.lockTime += Time.deltaTime;
 
-        // Hard drop
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            HardDrop();
-        }
+            // Rotation of the Piece
+            if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
+            {
+                Rotate(1);
+            }
 
+            // Left and Right Piece Movement
+            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                audioSource.Play();
+                Move(Vector2Int.left);
+            }
+            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                audioSource.Play();
+                Move(Vector2Int.right);
+            }
+
+            // Soft drop
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                audioSource.Play();
+                score++;
+                Move(Vector2Int.down);
+            }
+
+            // Hard drop
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                HardDrop();
+            }
+
+            if (score >= previousScore + scoreThreshold)
+            {
+                LevelIncrement();
+
+                previousScore = score / scoreThreshold * scoreThreshold;
+            }
+
+            if (Time.time >= this.stepTime)
+            {
+                Step();
+            }
+
+            this.board.Set(this);
+        }        
+    }
+
+    private void LevelIncrement()
+    {
+        if(level <= 10)
+        {
+            level++;
+        }        
+    }
+
+    private void Step()
+    {
+        this.stepTime = Time.time + stepDelay;
+
+        Move(Vector2Int.down);
+        score++;
+
+        if (this.lockTime >= this.lockDelay)
+        {            
+            Lock();
+        }
+    }
+
+    private void Lock()
+    {
         this.board.Set(this);
-    }    
+        this.board.ClearLines();
+        this.board.SpawnPiece();
+    }
     
     private bool Move(Vector2Int translation)
     {
-        Vector3Int newPosition = this.spawnPosition;
+        Vector3Int newPosition = this.position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
 
-        bool valid = this.board.IsValidPosition(this, newPosition);
+        bool valid = this.board.IsValidPosition(this, newPosition);        
 
-        if(valid)
+        if (valid)
         {
-            this.spawnPosition = newPosition;
+            this.position = newPosition;
+            this.lockTime = 0f;
         }
 
         return valid;
@@ -79,10 +165,15 @@ public class Piece : MonoBehaviour
 
     private void HardDrop()
     {
-        while(Move(Vector2Int.down)) 
+        audioSource.Play();
+
+        while (Move(Vector2Int.down)) 
         {
+            score++;
             continue;
         }
+
+        Lock();
     }
 
     // Function to activate the rotation of piece and wall kicks

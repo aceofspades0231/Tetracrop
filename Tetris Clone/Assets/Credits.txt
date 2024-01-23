@@ -1,0 +1,23 @@
+== Project Credits ==
+
+Project Title: Unity Game Project - Tetracrop
+
+== Development Team ==
+
+Lead Developer / Game Designer: Angelico Josef P. Vasquez
+Email: ajpv0231@gmail.com
+
+== Special Thanks ==
+
+- Unity Technologies for the amazing game development platform.
+- To Zigurous (https://www.youtube.com/@Zigurous; https://www.youtube.com/watch?v=ODLzYI4d-J8) for a great tutorial for the classic Tetris gameplay.
+- To TeruTeruSky (https://www.youtube.com/@TeruTeruSky; https://www.youtube.com/watch?v=DKUeAI79ujM) for a great Lo-fi remix of the classic Tetris game.
+- Minecraft and Gamer's Paradise (https://www.youtube.com/@BestGamingSoundEffects; https://www.youtube.com/watch?v=nj8VCWIb7D4) for providing a sound effect for the movement of the pieces.
+- To Denis (https://www.youtube.com/@DenisWASD; https://www.youtube.com/watch?v=YKTjVACAfqE) for providing a great Shader for a simple Background UI blur.
+- To Awesome dude’s Sound Effects (https://www.youtube.com/@awesomedudessoundeffects8489; https://www.youtube.com/watch?v=SPUpsb_L6Z4) for providing a sound effect for the clearing of lines.
+
+== Contact Information ==
+
+For inquiries or support, please contact ajpv0231@gmail.com.
+
+Thank you for playing our game!
