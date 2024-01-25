@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
@@ -28,11 +27,8 @@ public class Piece : MonoBehaviour
     public AudioClip soundClip;
     public AudioSource audioSource;
 
-    [SerializeField]
-    private TextMeshProUGUI scoreText;
-    [SerializeField]
-    private TextMeshProUGUI levelText;
-
+    private float speedMultiplier = 0.5f;
+    private float currentStepDelay;
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -63,9 +59,7 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
-            scoreText.text = score.ToString();
-            levelText.text = level.ToString();
-
+            Debug.Log("currentStepDelay: " + currentStepDelay);
             this.board.Clear(this);
 
             this.lockTime += Time.deltaTime;
@@ -106,6 +100,7 @@ public class Piece : MonoBehaviour
             {
                 LevelIncrement();
 
+                speedMultiplier += 0.1f;
                 previousScore = score / scoreThreshold * scoreThreshold;
             }
 
@@ -116,19 +111,21 @@ public class Piece : MonoBehaviour
 
             this.board.Set(this);
         }        
-    }
+    }    
 
     private void LevelIncrement()
     {
-        if(level <= 10)
-        {
-            level++;
-        }        
+        level++;
+
+        currentStepDelay = stepDelay / level;
     }
 
     private void Step()
     {
-        this.stepTime = Time.time + stepDelay;
+        if(level == 1)
+            this.stepTime = Time.time + stepDelay;
+        else
+            this.stepTime = Time.time + currentStepDelay * speedMultiplier;
 
         Move(Vector2Int.down);
         score++;
