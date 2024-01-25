@@ -1,3 +1,4 @@
+using System.Xml.Linq;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.Tilemaps;
@@ -16,6 +17,8 @@ public class Gameboard : MonoBehaviour
     // Plays sound effect
     public AudioClip soundClip;
     public AudioSource audioSource;
+
+    [SerializeField] private RectTransform loseMenu;
 
     public RectInt Bounds { 
         get
@@ -62,7 +65,9 @@ public class Gameboard : MonoBehaviour
 
     private void GameOver()
     {
-        this.tilemap.ClearAllTiles();
+        menu.gameIsPaused = true;
+
+        loseMenu.anchoredPosition = new Vector2(0f, 0f);
     }
 
     public void Set(Piece piece)

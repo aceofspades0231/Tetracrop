@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
@@ -27,12 +26,6 @@ public class Piece : MonoBehaviour
     // Plays sound effect
     public AudioClip soundClip;
     public AudioSource audioSource;
-
-    [SerializeField]
-    private TextMeshProUGUI scoreText;
-    [SerializeField]
-    private TextMeshProUGUI levelText;
-
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -63,9 +56,6 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
-            scoreText.text = score.ToString();
-            levelText.text = level.ToString();
-
             this.board.Clear(this);
 
             this.lockTime += Time.deltaTime;
@@ -120,10 +110,7 @@ public class Piece : MonoBehaviour
 
     private void LevelIncrement()
     {
-        if(level <= 10)
-        {
-            level++;
-        }        
+        level++;
     }
 
     private void Step()

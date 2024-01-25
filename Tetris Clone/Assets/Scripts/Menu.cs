@@ -1,10 +1,8 @@
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public Piece piece;
-
     // Check if the game is Paused
     public bool gameIsPaused = true;
 
@@ -30,6 +28,11 @@ public class Menu : MonoBehaviour
     {
         gameIsPaused = !gameIsPaused;
         pausedCanvas.gameObject.SetActive(false);
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void ExitGame()
