@@ -27,6 +27,9 @@ public class Piece : MonoBehaviour
     public AudioClip soundClip;
     public AudioSource audioSource;
 
+    private float speedMultiplier = 0.5f;
+    private float currentStepDelay;
+
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
         this.board = board;
@@ -56,6 +59,7 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
+            Debug.Log("currentStepDelay: " + currentStepDelay);
             this.board.Clear(this);
 
             this.lockTime += Time.deltaTime;
@@ -96,6 +100,7 @@ public class Piece : MonoBehaviour
             {
                 LevelIncrement();
 
+                speedMultiplier += 0.1f;
                 previousScore = score / scoreThreshold * scoreThreshold;
             }
 
@@ -106,16 +111,21 @@ public class Piece : MonoBehaviour
 
             this.board.Set(this);
         }        
-    }
+    }    
 
     private void LevelIncrement()
     {
         level++;
+
+        currentStepDelay = stepDelay / level;
     }
 
     private void Step()
     {
-        this.stepTime = Time.time + stepDelay;
+        if(level == 1)
+            this.stepTime = Time.time + stepDelay;
+        else
+            this.stepTime = Time.time + currentStepDelay * speedMultiplier;
 
         Move(Vector2Int.down);
         score++;
