@@ -59,7 +59,6 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
-            Debug.Log("currentStepDelay: " + currentStepDelay);
             this.board.Clear(this);
 
             this.lockTime += Time.deltaTime;

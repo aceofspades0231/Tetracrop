@@ -1,6 +1,4 @@
-using System.Xml.Linq;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.Tilemaps;
 
 public class Gameboard : MonoBehaviour
@@ -45,22 +43,35 @@ public class Gameboard : MonoBehaviour
         audioSource.clip = soundClip;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            HoldPiece();
+        }
+    }
+
     public void SpawnPiece()
     {
         int random = Random.Range(0, this.tetrominoes.Length);
         TetrominoData data = this.tetrominoes[random];
 
         this.activePiece.Initialized(this, this.spawnPosition, data);
-
-        // If Pieces reach the spawnPosition the game will be over
+        
         if (IsValidPosition(this.activePiece, this.spawnPosition))
         {
             Set(this.activePiece);
         }
         else
         {
+            // If Pieces reach the spawnPosition the game will be over
             GameOver();
         }
+    }
+
+    private void HoldPiece()
+    {
+        // Will Update in the Future
     }
 
     private void GameOver()
@@ -70,6 +81,7 @@ public class Gameboard : MonoBehaviour
         loseMenu.anchoredPosition = new Vector2(0f, 0f);
     }
 
+    // Sets and show Piece onto the Tilemap
     public void Set(Piece piece)
     {
         for(int i = 0; i < piece.cells.Length; i++)
