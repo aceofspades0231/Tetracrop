@@ -11,11 +11,21 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if(mainMenuCanvas.gameObject.activeSelf != true)
         {
-            gameIsPaused = !gameIsPaused;
-            pausedCanvas.gameObject.SetActive(true);
-        }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                gameIsPaused = !gameIsPaused;
+                if (gameIsPaused)
+                {
+                    pausedCanvas.gameObject.SetActive(true);
+                }
+                else
+                {
+                    pausedCanvas.gameObject.SetActive(false);
+                }
+            }
+        }        
     }
 
     public void StartGame()
