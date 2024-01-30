@@ -6,23 +6,29 @@ public class Menu : MonoBehaviour
     // Check if the game is Paused
     public bool gameIsPaused = true;
 
-    public Canvas mainMenuCanvas;
-    public Canvas pausedCanvas;
+    public GameObject mainMenu;
+    public GameObject pauseMenu;
+
+    private void Start()
+    {
+        mainMenu.SetActive(true);
+        pauseMenu.SetActive(false);
+    }
 
     private void Update()
     {
-        if(mainMenuCanvas.gameObject.activeSelf != true)
+        if(mainMenu.activeSelf != true)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 gameIsPaused = !gameIsPaused;
                 if (gameIsPaused)
                 {
-                    pausedCanvas.gameObject.SetActive(true);
+                    pauseMenu.SetActive(true);
                 }
                 else
                 {
-                    pausedCanvas.gameObject.SetActive(false);
+                    pauseMenu.SetActive(false);
                 }
             }
         }        
@@ -31,13 +37,13 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
-        mainMenuCanvas.gameObject.SetActive(false);
+        mainMenu.SetActive(false);
     }
 
     public void ResumeGame()
     {
         gameIsPaused = !gameIsPaused;
-        pausedCanvas.gameObject.SetActive(false);
+        pauseMenu.SetActive(false);
     }
 
     public void RestartGame()
