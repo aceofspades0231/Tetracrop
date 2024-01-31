@@ -18,7 +18,9 @@ public class Gameboard : MonoBehaviour
     public AudioClip soundClip;
     public AudioSource audioSource;
 
-    [SerializeField] private RectTransform loseMenu;
+    public bool gameOver = false;
+
+    [SerializeField] private RectTransform gameOverMenu;
     [SerializeField] private float moveDuration = 0.25f;
     private Vector2 targetPosition = Vector2.zero;
 
@@ -81,6 +83,9 @@ public class Gameboard : MonoBehaviour
     private void GameOver()
     {
         menu.gameIsPaused = true;
+        gameOver = true;
+
+        menu.nameInput.text = "";
 
         StartCoroutine(MoveLoseMenu(targetPosition));
     }
@@ -193,16 +198,16 @@ public class Gameboard : MonoBehaviour
 
     IEnumerator MoveLoseMenu(Vector2 targetPosition)
     {
-        Vector2 startingPosition = loseMenu.anchoredPosition;
+        Vector2 startingPosition = gameOverMenu.anchoredPosition;
         float elapsedTime = 0f;
 
         while (elapsedTime < moveDuration)
         {
-            loseMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, elapsedTime / moveDuration);
+            gameOverMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, elapsedTime / moveDuration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        loseMenu.anchoredPosition = targetPosition;
+        gameOverMenu.anchoredPosition = targetPosition;
     }
 }
