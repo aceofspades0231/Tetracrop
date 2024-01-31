@@ -1,6 +1,7 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using TMPro;
-using System.Collections.Generic;
 
 public class HighscoreTable : MonoBehaviour
 { 
@@ -19,28 +20,17 @@ public class HighscoreTable : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highScoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
-        // Sort the Highest to Lowest scores
-        for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+        if (highscores == null)
         {
-            for(int j = i; j < highscores.highscoreEntryList.Count; j++)
-            {
-                if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
-                {
-                    // Swap
-                    HighscoreEntry temp = highscores.highscoreEntryList[i];
-                    highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
-                    highscores.highscoreEntryList[j] = temp;
-                }
-            }
+            highscores = new Highscores();
+        }
+        if (highscores.highscoreEntryList == null)
+        {
+            highscores.highscoreEntryList = new List<HighscoreEntry>();
         }
 
-        if (highscores.highscoreEntryList.Count > 5)
-        {
-            for (int h = highscores.highscoreEntryList.Count; h > 5; h--)
-            {
-                highscores.highscoreEntryList.RemoveAt(5);
-            }
-        }
+        //  Sort the Highest to Lowest scores
+        highscores.highscoreEntryList = highscores.highscoreEntryList.OrderByDescending(entry => entry.score).Take(5).ToList();
 
         highscoreEntryTransformList = new List<Transform>();
         foreach (HighscoreEntry entry in highscores.highscoreEntryList)
@@ -93,16 +83,17 @@ public class HighscoreTable : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highScoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
+        if (highscores == null)
+        {
+            highscores = new Highscores();
+        }
+        if (highscores.highscoreEntryList == null)
+        {
+            highscores.highscoreEntryList = new List<HighscoreEntry>();
+        }
+
         // Add score to the Table
         highscores.highscoreEntryList.Add(entry);
-
-        if (highscores.highscoreEntryList.Count > 5)
-        {
-            for (int h = highscores.highscoreEntryList.Count; h > 5; h--)
-            {
-                highscores.highscoreEntryList.RemoveAt(5);
-            }
-        }
 
         // Save the table
         string json = JsonUtility.ToJson(highscores);

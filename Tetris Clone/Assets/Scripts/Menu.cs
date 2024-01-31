@@ -10,7 +10,8 @@ public class Menu : MonoBehaviour
 
     public TMP_InputField nameInput;
 
-    public RectTransform mainMenu;
+    public RectTransform highscoreDisplay;
+    public GameObject mainMenu;
     public GameObject pauseMenu;
 
     [SerializeField]
@@ -25,15 +26,14 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
-        mainMenu.anchoredPosition = Vector2.zero;
+        mainMenu.SetActive(true);
         pauseMenu.SetActive(false);
     }
 
     private void Update()
     {
-        if(mainMenu.anchoredPosition.x > 0f)
+        if(mainMenu.activeSelf == true)
         {
-            Debug.Log("Main Menu out of the way");
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 gameIsPaused = !gameIsPaused;
@@ -52,7 +52,8 @@ public class Menu : MonoBehaviour
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
-        mainMenu.anchoredPosition = new Vector2(1920, 0);
+        mainMenu.SetActive(false);
+        highscoreDisplay.anchoredPosition = new Vector2(1920, 0);
     }
 
     public void ResumeGame()
@@ -61,17 +62,25 @@ public class Menu : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
+    public void SimpleRestart()
+    {
+        SceneManager.LoadScene(0);
+    }
+
     public void RestartGame()
     {
         if(nameInput.text != null)
         {
             string name = nameInput.text;
-
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
-            Debug.Log("Final Score: " + piece.finalScore + " Final Level:" + piece.finalLevel + " Text: " + nameInput.text);
 
             SceneManager.LoadScene(0);
         }        
+    }
+
+    public void SimpleExit()
+    {
+        Application.Quit();
     }
 
     public void ExitGame()

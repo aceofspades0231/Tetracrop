@@ -926,14 +926,14 @@ MonoBehaviour:
   m_VerticalScrollbarEventHandler: {fileID: 0}
   m_LayoutGroup: {fileID: 0}
   m_ScrollSensitivity: 1
-  m_ContentType: 0
+  m_ContentType: 5
   m_InputType: 0
   m_AsteriskChar: 42
   m_KeyboardType: 0
   m_LineType: 0
   m_HideMobileInput: 0
   m_HideSoftKeyboard: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 5
   m_RegexValue: 
   m_GlobalPointSize: 14
   m_CharacterLimit: 0
@@ -1046,7 +1046,7 @@ RectTransform:
   m_Children:
   - {fileID: 383893778}
   m_Father: {fileID: 1703067814}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2656,7 +2656,7 @@ RectTransform:
   m_Children:
   - {fileID: 1744125887}
   m_Father: {fileID: 1703067814}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2709,7 +2709,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1138564216}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: SimpleExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3053,7 +3053,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1703067814}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3598,7 +3598,7 @@ RectTransform:
   - {fileID: 1060791445}
   - {fileID: 1847835441}
   m_Father: {fileID: 1714497237}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3862,7 +3862,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1138564216}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_MethodName: SimpleExit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3991,7 +3991,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameIsPaused: 1
   nameInput: {fileID: 305004394}
-  mainMenu: {fileID: 1703067814}
+  highscoreDisplay: {fileID: 1241973629}
+  mainMenu: {fileID: 1703067813}
   pauseMenu: {fileID: 953241411}
   highscoreTable: {fileID: 1241973632}
   piece: {fileID: 1359702288}
@@ -4289,7 +4290,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241973628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -4299,12 +4300,12 @@ RectTransform:
   - {fileID: 1712439205}
   - {fileID: 466251489}
   - {fileID: 377226305}
-  m_Father: {fileID: 1703067814}
+  m_Father: {fileID: 1714497237}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -450, y: -110}
+  m_AnchoredPosition: {x: -350, y: -110}
   m_SizeDelta: {x: 950, y: 535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241973630
@@ -5236,7 +5237,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1138564216}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: RestartGame
+        m_MethodName: SimpleRestart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5693,7 +5694,7 @@ RectTransform:
   - {fileID: 2144816339}
   - {fileID: 786056205}
   m_Father: {fileID: 1714497237}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6121,7 +6122,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 750709091}
-  - {fileID: 1241973629}
   - {fileID: 869598196}
   - {fileID: 334708507}
   - {fileID: 797458677}
@@ -6339,6 +6339,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1703067814}
+  - {fileID: 1241973629}
   - {fileID: 953241412}
   - {fileID: 1585252346}
   m_Father: {fileID: 0}
