@@ -1,3 +1,5 @@
+using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -17,6 +19,8 @@ public class Gameboard : MonoBehaviour
     public AudioSource audioSource;
 
     [SerializeField] private RectTransform loseMenu;
+    [SerializeField] private float moveDuration = 0.25f;
+    private Vector2 targetPosition = Vector2.zero;
 
     public RectInt Bounds { 
         get
@@ -78,7 +82,7 @@ public class Gameboard : MonoBehaviour
     {
         menu.gameIsPaused = true;
 
-        loseMenu.anchoredPosition = new Vector2(0f, 0f);
+        StartCoroutine(MoveLoseMenu(targetPosition));
     }
 
     // Sets and show Piece onto the Tilemap
@@ -185,5 +189,20 @@ public class Gameboard : MonoBehaviour
 
             row++;
         }
+    }
+
+    IEnumerator MoveLoseMenu(Vector2 targetPosition)
+    {
+        Vector2 startingPosition = loseMenu.anchoredPosition;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < moveDuration)
+        {
+            loseMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, elapsedTime / moveDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        loseMenu.anchoredPosition = targetPosition;
     }
 }
