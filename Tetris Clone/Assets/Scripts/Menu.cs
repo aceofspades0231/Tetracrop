@@ -32,7 +32,7 @@ public class Menu : MonoBehaviour
 
     private void Update()
     {
-        if(mainMenu.activeSelf == true)
+        if(mainMenu.activeSelf != true)
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
