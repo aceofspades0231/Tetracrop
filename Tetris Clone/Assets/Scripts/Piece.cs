@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class Piece : MonoBehaviour
@@ -18,7 +19,10 @@ public class Piece : MonoBehaviour
     private int scoreThreshold = 500;
     private int previousScore;
 
-    public int level = 1;
+    private int level = 1;
+
+    public int finalScore;
+    public int finalLevel;
 
     private float stepTime;
     private float lockTime;
@@ -29,6 +33,18 @@ public class Piece : MonoBehaviour
 
     private float speedMultiplier = 0.5f;
     private float currentStepDelay;
+    
+    [SerializeField]
+    private TextMeshProUGUI gameLevelText;
+    [SerializeField]
+    private TextMeshProUGUI gameScoreText;
+
+    [SerializeField]
+    private TextMeshProUGUI finalLevelText;
+    [SerializeField]
+    private TextMeshProUGUI finalScoreText;
+
+    private int checkOnce = 0;
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -59,10 +75,15 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
-            Debug.Log("currentStepDelay: " + currentStepDelay);
             this.board.Clear(this);
 
             this.lockTime += Time.deltaTime;
+
+            gameLevelText.text = level.ToString();
+            gameScoreText.text = score.ToString();
+
+            finalLevelText.text = level.ToString();
+            finalScoreText.text = score.ToString();
 
             // Rotation of the Piece
             if (Input.GetKeyDown(KeyCode.W) || (Input.GetKeyDown(KeyCode.UpArrow)))
@@ -110,6 +131,19 @@ public class Piece : MonoBehaviour
             }
 
             this.board.Set(this);
+
+            if (board.gameOver == true)
+            {
+                checkOnce++;
+                if(checkOnce == 1)
+                {
+                    finalLevel = level;
+                    finalScore = score;
+
+                    finalLevelText.text = finalLevel.ToString();
+                    finalScoreText.text = finalScore.ToString();
+                }
+            }
         }        
     }    
 

@@ -1,6 +1,6 @@
-using System.Xml.Linq;
+using System.Collections;
+using TMPro;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.Tilemaps;
 
 public class Gameboard : MonoBehaviour
@@ -18,7 +18,11 @@ public class Gameboard : MonoBehaviour
     public AudioClip soundClip;
     public AudioSource audioSource;
 
-    [SerializeField] private RectTransform loseMenu;
+    public bool gameOver = false;
+
+    [SerializeField] private RectTransform gameOverMenu;
+    [SerializeField] private float moveDuration = 0.25f;
+    private Vector2 targetPosition = Vector2.zero;
 
     public RectInt Bounds { 
         get
@@ -45,31 +49,48 @@ public class Gameboard : MonoBehaviour
         audioSource.clip = soundClip;
     }
 
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            HoldPiece();
+        }
+    }
+
     public void SpawnPiece()
     {
         int random = Random.Range(0, this.tetrominoes.Length);
         TetrominoData data = this.tetrominoes[random];
 
         this.activePiece.Initialized(this, this.spawnPosition, data);
-
-        // If Pieces reach the spawnPosition the game will be over
+        
         if (IsValidPosition(this.activePiece, this.spawnPosition))
         {
             Set(this.activePiece);
         }
         else
         {
+            // If Pieces reach the spawnPosition the game will be over
             GameOver();
         }
+    }
+
+    private void HoldPiece()
+    {
+        // Will Update in the Future
     }
 
     private void GameOver()
     {
         menu.gameIsPaused = true;
+        gameOver = true;
 
-        loseMenu.anchoredPosition = new Vector2(0f, 0f);
+        menu.nameInput.text = "";
+
+        StartCoroutine(MoveLoseMenu(targetPosition));
     }
 
+    // Sets and show Piece onto the Tilemap
     public void Set(Piece piece)
     {
         for(int i = 0; i < piece.cells.Length; i++)
@@ -173,5 +194,20 @@ public class Gameboard : MonoBehaviour
 
             row++;
         }
+    }
+
+    IEnumerator MoveLoseMenu(Vector2 targetPosition)
+    {
+        Vector2 startingPosition = gameOverMenu.anchoredPosition;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < moveDuration)
+        {
+            gameOverMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, elapsedTime / moveDuration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        gameOverMenu.anchoredPosition = targetPosition;
     }
 }
