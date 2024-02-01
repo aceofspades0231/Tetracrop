@@ -69,13 +69,18 @@ public class Menu : MonoBehaviour
 
     public void RestartGame()
     {
-        if(nameInput.text != null)
+        if(nameInput.text != "")
         {
             string name = nameInput.text;
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+        }
+        else
+        {
+            string name = "AAA";
+            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);            
+        }
 
-            SceneManager.LoadScene(0);
-        }        
+        SceneManager.LoadScene(0);
     }
 
     public void SimpleExit()
@@ -85,14 +90,17 @@ public class Menu : MonoBehaviour
 
     public void ExitGame()
     {
-        if (nameInput.text != null)
+        if (nameInput.text != "")
         {
             string name = nameInput.text;
-
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
-            Debug.Log("Final Score: " + piece.finalScore + " Final Level:" + piece.finalLevel + " Text: " + nameInput.text);
+        }
+        else
+        {
+            string name = "AAA";
+            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+        }
 
-            Application.Quit();
-        }            
+        Application.Quit();
     }
 }
