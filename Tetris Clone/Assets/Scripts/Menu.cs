@@ -76,7 +76,7 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            string name = "AAA";
+            string name = "DEF";
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);            
         }
 
@@ -97,7 +97,7 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            string name = "AAA";
+            string name = "DEF";
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
         }
 
