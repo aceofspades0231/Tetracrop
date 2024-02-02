@@ -1,4 +1,3 @@
-using static UnityEditor.Progress;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -64,11 +63,15 @@ public class Options : MonoBehaviour
 
     private void LoadSettings()
     {
+        int screenWidth = PlayerPrefs.GetInt("ResolutionWidth", Screen.currentResolution.width);
+        int screenHeight = PlayerPrefs.GetInt("ResolutionHeight", Screen.currentResolution.height);
         bool fullscreen = PlayerPrefs.GetInt("Fullscreen", Screen.fullScreen ? 1 : 0) == 1;
         float musicVol = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
         float sfxVol = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
         bool muted = PlayerPrefs.GetInt("Muted", 0) == 1;
 
+        Screen.SetResolution(screenWidth, screenHeight, Screen.fullScreenMode);
+            
         Screen.fullScreen = fullscreen;
         fullscreenToggle.isOn = fullscreen;
 
@@ -88,20 +91,15 @@ public class Options : MonoBehaviour
     {
         Resolution resolution = resolutions[resIndex];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        PlayerPrefs.SetInt("ResolutionWidth", resolution.width);
+        PlayerPrefs.SetInt("ResolutionHeight", resolution.height);
     }
 
-    public void SetFullscreen()
+    public void SetFullscreen(bool isFullscreen)
     {
-        if (fullscreenToggle.isOn == true)
-        {
-            Screen.fullScreen = true;
-            PlayerPrefs.SetInt("Fullscreen", 1);
-        }
-        else
-        {
-            Screen.fullScreen = false;
-            PlayerPrefs.SetInt("Fullscreen", 0);
-        }        
+        Screen.fullScreen = isFullscreen;
+        PlayerPrefs.SetInt("Fullscreen", isFullscreen ? 1 : 0);
     }
 
     //Called when Slider is moved
