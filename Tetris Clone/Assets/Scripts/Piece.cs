@@ -28,8 +28,10 @@ public class Piece : MonoBehaviour
     private float lockTime;
 
     // Plays sound effect
-    public AudioClip soundClip;
-    public AudioSource audioSource;
+    [SerializeField]
+    private AudioClip soundClip;
+    [SerializeField]
+    private AudioSource audioSource;
 
     private float speedMultiplier = 0.5f;
     private float currentStepDelay;
