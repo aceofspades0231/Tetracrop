@@ -1,7 +1,7 @@
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class Menu : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         mainMenu.SetActive(true);
-        pauseMenu.SetActive(false);
+        pauseMenu.SetActive(false);       
     }
 
     private void Update()
@@ -36,24 +36,29 @@ public class Menu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                gameIsPaused = !gameIsPaused;
-                if (gameIsPaused)
-                {
-                    pauseMenu.SetActive(true);
-                }
-                else
-                {
-                    pauseMenu.SetActive(false);
-                }
+                PauseGame();
             }
-        }        
-    }
+        }
+    }    
 
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
         mainMenu.SetActive(false);
         highscoreDisplay.anchoredPosition = new Vector2(1920, 0);
+    }
+
+    public void PauseGame()
+    {
+        gameIsPaused = !gameIsPaused;
+        if (gameIsPaused)
+        {
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+        }
     }
 
     public void ResumeGame()
@@ -102,5 +107,5 @@ public class Menu : MonoBehaviour
         }
 
         Application.Quit();
-    }
+    }    
 }
