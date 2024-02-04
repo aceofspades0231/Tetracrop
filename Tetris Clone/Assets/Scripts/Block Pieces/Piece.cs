@@ -28,8 +28,10 @@ public class Piece : MonoBehaviour
     private float lockTime;
 
     // Plays sound effect
-    public AudioClip soundClip;
-    public AudioSource audioSource;
+    [SerializeField]
+    private AudioClip soundClip;
+    [SerializeField]
+    private AudioSource audioSource;
 
     private float speedMultiplier = 0.5f;
     private float currentStepDelay;
@@ -45,6 +47,11 @@ public class Piece : MonoBehaviour
     private TextMeshProUGUI finalScoreText;
 
     private int checkOnce = 0;
+
+    [SerializeField]
+    private float moveCooldown = 0.2f; // Adjust this value to change the movement speed
+    [SerializeField]
+    private float nextMoveTime = 0f;
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
@@ -69,7 +76,7 @@ public class Piece : MonoBehaviour
     private void Start()
     {
         audioSource.clip = soundClip;
-    }
+    }    
 
     public void Update()
     {
@@ -91,24 +98,28 @@ public class Piece : MonoBehaviour
                 Rotate(1);
             }
 
-            // Left and Right Piece Movement
-            if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
+            // To make sure the movement is not ultrafast
+            if (Time.time >= nextMoveTime)
             {
-                audioSource.Play();
-                Move(Vector2Int.left);
-            }
-            else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
-            {
-                audioSource.Play();
-                Move(Vector2Int.right);
-            }
+                // Left and Right Piece Movement
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+                {
+                    Move(Vector2Int.left);
+                    nextMoveTime = Time.time + moveCooldown;
+                }
+                else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+                {
+                    Move(Vector2Int.right);
+                    nextMoveTime = Time.time + moveCooldown;
+                }
 
-            // Soft drop
-            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                audioSource.Play();
-                score++;
-                Move(Vector2Int.down);
+                // Soft drop
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+                {
+                    score++;
+                    Move(Vector2Int.down);
+                    nextMoveTime = Time.time + moveCooldown;
+                }
             }
 
             // Hard drop
@@ -156,13 +167,24 @@ public class Piece : MonoBehaviour
 
     private void Step()
     {
-        if(level == 1)
+        Vector2Int translation = Vector2Int.down;
+        Vector3Int newPosition = this.position;
+        newPosition.x += translation.x;
+        newPosition.y += translation.y;
+
+        if (level == 1)
             this.stepTime = Time.time + stepDelay;
         else
             this.stepTime = Time.time + currentStepDelay * speedMultiplier;
 
-        Move(Vector2Int.down);
-        score++;
+        bool valid = this.board.IsValidPosition(this, newPosition);
+
+        if (valid)
+        {
+            score++;
+            this.position = newPosition;
+            this.lockTime = 0f;
+        }       
 
         if (this.lockTime >= this.lockDelay)
         {            
@@ -182,11 +204,12 @@ public class Piece : MonoBehaviour
         Vector3Int newPosition = this.position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
-
+        
         bool valid = this.board.IsValidPosition(this, newPosition);        
 
         if (valid)
         {
+            audioSource.Play();
             this.position = newPosition;
             this.lockTime = 0f;
         }

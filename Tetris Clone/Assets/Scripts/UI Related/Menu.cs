@@ -1,7 +1,7 @@
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 
 public class Menu : MonoBehaviour
 {
@@ -27,7 +27,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         mainMenu.SetActive(true);
-        pauseMenu.SetActive(false);
+        pauseMenu.SetActive(false);       
     }
 
     private void Update()
@@ -36,24 +36,29 @@ public class Menu : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                gameIsPaused = !gameIsPaused;
-                if (gameIsPaused)
-                {
-                    pauseMenu.SetActive(true);
-                }
-                else
-                {
-                    pauseMenu.SetActive(false);
-                }
+                PauseGame();
             }
-        }        
-    }
+        }
+    }    
 
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
         mainMenu.SetActive(false);
         highscoreDisplay.anchoredPosition = new Vector2(1920, 0);
+    }
+
+    public void PauseGame()
+    {
+        gameIsPaused = !gameIsPaused;
+        if (gameIsPaused)
+        {
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            pauseMenu.SetActive(false);
+        }
     }
 
     public void ResumeGame()
@@ -69,13 +74,18 @@ public class Menu : MonoBehaviour
 
     public void RestartGame()
     {
-        if(nameInput.text != null)
+        if(nameInput.text != "")
         {
             string name = nameInput.text;
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+        }
+        else
+        {
+            string name = "DEF";
+            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);            
+        }
 
-            SceneManager.LoadScene(0);
-        }        
+        SceneManager.LoadScene(0);
     }
 
     public void SimpleExit()
@@ -85,14 +95,17 @@ public class Menu : MonoBehaviour
 
     public void ExitGame()
     {
-        if (nameInput.text != null)
+        if (nameInput.text != "")
         {
             string name = nameInput.text;
-
             highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
-            Debug.Log("Final Score: " + piece.finalScore + " Final Level:" + piece.finalLevel + " Text: " + nameInput.text);
+        }
+        else
+        {
+            string name = "DEF";
+            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+        }
 
-            Application.Quit();
-        }            
-    }
+        Application.Quit();
+    }    
 }
