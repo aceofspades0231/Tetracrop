@@ -11,22 +11,29 @@ public class Piece : MonoBehaviour
 
     public Menu menu;
 
+    [Space]
+
     public float stepDelay = 1f;
+    [Tooltip("When the piece locks in place")]
     public float lockDelay = 0.5f;
 
+    [Tooltip("Handles the score for the whole game")]
     public int score = 0;
-    // Increase level if player reach an increment score of 500 (e.g 1000, 1500)
-    private int scoreThreshold = 500;
+    // Increase level if player reach an increment score of 1000 (e.g 1000, 2000)
+    private int scoreThreshold = 1000;
     private int previousScore;
 
     private int level = 1;
 
+    [Tooltip("For showing the Final Score in the Game Over screen")]
     public int finalScore;
+    [Tooltip("For showing the Final Level reached in the Game Over screen")]
     public int finalLevel;
 
     private float stepTime;
     private float lockTime;
 
+    [Header("SFX")]
     // Plays sound effect
     [SerializeField]
     private AudioClip soundClip;
@@ -35,7 +42,8 @@ public class Piece : MonoBehaviour
 
     private float speedMultiplier = 0.5f;
     private float currentStepDelay;
-    
+
+    [Header("UI Display")]
     [SerializeField]
     private TextMeshProUGUI gameLevelText;
     [SerializeField]
@@ -45,9 +53,10 @@ public class Piece : MonoBehaviour
     private TextMeshProUGUI finalLevelText;
     [SerializeField]
     private TextMeshProUGUI finalScoreText;
-
+    
     private int checkOnce = 0;
 
+    [Header("Movement Press")]
     [SerializeField]
     private float moveCooldown = 0.2f; // Adjust this value to change the movement speed
     [SerializeField]
@@ -56,20 +65,20 @@ public class Piece : MonoBehaviour
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
         this.board = board;
-        this.position = spawnPosition;
+        position = spawnPosition;
         this.data = data;
-        this.rotationIndex = 0;
-        stepTime = Time.time + this.stepDelay;
+        rotationIndex = 0;
+        stepTime = Time.time + stepDelay;
         lockTime = 0f;
 
-        if (this.cells == null)
+        if (cells == null)
         {
-            this.cells = new Vector3Int[data.cells.Length];
+            cells = new Vector3Int[data.cells.Length];
         }
 
-        for(int i = 0; i < this.cells.Length; i++)
+        for(int i = 0; i < cells.Length; i++)
         {
-            this.cells[i] = (Vector3Int)data.cells[i];
+            cells[i] = (Vector3Int)data.cells[i];
         }
     }
 
@@ -82,9 +91,9 @@ public class Piece : MonoBehaviour
     {
         if (!menu.gameIsPaused)
         {
-            this.board.Clear(this);
+            board.Clear(this);
 
-            this.lockTime += Time.deltaTime;
+            lockTime += Time.deltaTime;
 
             gameLevelText.text = level.ToString();
             gameScoreText.text = score.ToString();
@@ -136,12 +145,12 @@ public class Piece : MonoBehaviour
                 previousScore = score / scoreThreshold * scoreThreshold;
             }
 
-            if (Time.time >= this.stepTime)
+            if (Time.time >= stepTime)
             {
                 Step();
             }
 
-            this.board.Set(this);
+            board.Set(this);
 
             if (board.gameOver == true)
             {
@@ -168,25 +177,25 @@ public class Piece : MonoBehaviour
     private void Step()
     {
         Vector2Int translation = Vector2Int.down;
-        Vector3Int newPosition = this.position;
+        Vector3Int newPosition = position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
 
         if (level == 1)
-            this.stepTime = Time.time + stepDelay;
+            stepTime = Time.time + stepDelay;
         else
-            this.stepTime = Time.time + currentStepDelay * speedMultiplier;
+            stepTime = Time.time + currentStepDelay * speedMultiplier;
 
-        bool valid = this.board.IsValidPosition(this, newPosition);
+        bool valid = board.IsValidPosition(this, newPosition);
 
         if (valid)
         {
             score++;
-            this.position = newPosition;
-            this.lockTime = 0f;
+            position = newPosition;
+            lockTime = 0f;
         }       
 
-        if (this.lockTime >= this.lockDelay)
+        if (lockTime >= lockDelay)
         {            
             Lock();
         }
@@ -194,24 +203,24 @@ public class Piece : MonoBehaviour
 
     private void Lock()
     {
-        this.board.Set(this);
-        this.board.ClearLines();
-        this.board.SpawnPiece();
+        board.Set(this);
+        board.ClearLines();
+        board.SpawnPiece();
     }
     
     private bool Move(Vector2Int translation)
     {
-        Vector3Int newPosition = this.position;
+        Vector3Int newPosition = position;
         newPosition.x += translation.x;
         newPosition.y += translation.y;
         
-        bool valid = this.board.IsValidPosition(this, newPosition);        
+        bool valid = board.IsValidPosition(this, newPosition);        
 
         if (valid)
         {
             audioSource.Play();
-            this.position = newPosition;
-            this.lockTime = 0f;
+            position = newPosition;
+            lockTime = 0f;
         }
 
         return valid;
@@ -233,14 +242,14 @@ public class Piece : MonoBehaviour
     // Function to activate the rotation of piece and wall kicks
     private void Rotate(int direction)
     {
-        int originalRotation = this.rotationIndex;
-        this.rotationIndex = Wrap(this.rotationIndex + direction, 0, 4);
+        int originalRotation = rotationIndex;
+        rotationIndex = Wrap(rotationIndex + direction, 0, 4);
 
         ApplyRotationMatrix(direction);
 
-        if (!TestWallKicks(this.rotationIndex, direction))
+        if (!TestWallKicks(rotationIndex, direction))
         {
-            this.rotationIndex = originalRotation;
+            rotationIndex = originalRotation;
             ApplyRotationMatrix(-direction);
         }
     }
@@ -248,13 +257,13 @@ public class Piece : MonoBehaviour
     // Applies the rotation to the piece
     private void ApplyRotationMatrix(int direction)
     {
-        for (int i = 0; i < this.cells.Length; i++)
+        for (int i = 0; i < cells.Length; i++)
         {
-            Vector3 cell = this.cells[i];
+            Vector3 cell = cells[i];
 
             int x, y;
 
-            switch (this.data.tetromino)
+            switch (data.tetromino)
             {
                 // For I and O pieces
                 case Tetromino.Carrot:
@@ -271,7 +280,7 @@ public class Piece : MonoBehaviour
                     break;
             }
 
-            this.cells[i] = new Vector3Int(x, y, 0);
+            cells[i] = new Vector3Int(x, y, 0);
         }
     }
 
@@ -280,9 +289,9 @@ public class Piece : MonoBehaviour
     {
         int wallKickIndex = GetWallKickIndex(rotationIndex, rotationDirection);
 
-        for(int i = 0; i < this.data.wallKicks.GetLength(1); i++)
+        for(int i = 0; i < data.wallKicks.GetLength(1); i++)
         {
-            Vector2Int translation = this.data.wallKicks[wallKickIndex, i];
+            Vector2Int translation = data.wallKicks[wallKickIndex, i];
 
             if (Move(translation))
             {
@@ -302,7 +311,7 @@ public class Piece : MonoBehaviour
             wallKickIndex--;
         }
 
-        return Wrap(wallKickIndex, 0, this.data.wallKicks.GetLength(0));
+        return Wrap(wallKickIndex, 0, data.wallKicks.GetLength(0));
     }
 
     // Resets the rotationIndex to 0 or 3
