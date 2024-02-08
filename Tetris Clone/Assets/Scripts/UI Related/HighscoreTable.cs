@@ -5,7 +5,9 @@ using TMPro;
 using UnityEngine.UI;
 
 public class HighscoreTable : MonoBehaviour
-{ 
+{
+    private Transform scrollContainer;
+    private Transform panelContainer;
     private Transform entryContainer;
     private Transform entryTemplate;
 
@@ -14,7 +16,9 @@ public class HighscoreTable : MonoBehaviour
     private void Awake()
     {
         entryContainer = transform.Find("Highscore Container");
-        entryTemplate = entryContainer.Find("Highscore Entry Template");
+        scrollContainer = entryContainer.Find("Scroll");
+        panelContainer = scrollContainer.Find("Panel");
+        entryTemplate = panelContainer.Find("Highscore Entry Template");
 
         entryTemplate.gameObject.SetActive(false);        
 
@@ -31,12 +35,12 @@ public class HighscoreTable : MonoBehaviour
         }
 
         //  Sort the Highest to Lowest scores
-        highscores.highscoreEntryList = highscores.highscoreEntryList.OrderByDescending(entry => entry.score).Take(5).ToList();
+        highscores.highscoreEntryList = highscores.highscoreEntryList.OrderByDescending(entry => entry.score).Take(50).ToList();
 
         highscoreEntryTransformList = new List<Transform>();
         foreach (HighscoreEntry entry in highscores.highscoreEntryList)
         {
-            CreateHighscoreEntryTransform(entry, entryContainer, highscoreEntryTransformList);
+            CreateHighscoreEntryTransform(entry, panelContainer, highscoreEntryTransformList);
         }
     }
 
