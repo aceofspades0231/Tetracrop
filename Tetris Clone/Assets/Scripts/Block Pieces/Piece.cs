@@ -19,8 +19,8 @@ public class Piece : MonoBehaviour
 
     [Tooltip("Handles the score for the whole game")]
     public int score = 0;
-    // Increase level if player reach an increment score of 1000 (e.g 1000, 2000)
-    private int scoreThreshold = 1000;
+    // Increase level if player reach an increment score of 2500 (e.g 2500, 5000)
+    private int scoreThreshold = 2500;
     private int previousScore;
 
     private int level = 1;
@@ -125,7 +125,7 @@ public class Piece : MonoBehaviour
                 // Soft drop
                 if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
                 {
-                    score++;
+                    score += 10;    
                     Move(Vector2Int.down);
                     nextMoveTime = Time.time + moveCooldown;
                 }
@@ -190,7 +190,7 @@ public class Piece : MonoBehaviour
 
         if (valid)
         {
-            score++;
+            score += 10;
             position = newPosition;
             lockTime = 0f;
         }       
@@ -232,7 +232,7 @@ public class Piece : MonoBehaviour
 
         while (Move(Vector2Int.down)) 
         {
-            score++;
+            score += 10;
             continue;
         }
 

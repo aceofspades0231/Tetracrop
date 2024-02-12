@@ -174,17 +174,18 @@ public class Gameboard : MonoBehaviour
         return true;
     }
 
-    // Clears whole line and make the above row fall down
     private void LineClear(int row)
     {
         RectInt bounds = Bounds;
 
+        // Clears whole line
         for (int col = bounds.xMin; col < bounds.xMax; col++)
         {
             Vector3Int position = new Vector3Int(col, row, 0);
             tilemap.SetTile(position, null);
         }
 
+        // Make the above rows fall down
         while (row < bounds.yMax)
         {
             for (int col = bounds.xMin; col < bounds.xMax; col++)
@@ -203,12 +204,11 @@ public class Gameboard : MonoBehaviour
     IEnumerator MoveLoseMenu(Vector2 targetPosition)
     {
         Vector2 startingPosition = gameOverMenu.anchoredPosition;
-        float elapsedTime = 0f;
 
-        while (elapsedTime < moveDuration)
+        for (float elapsedTime = 0f; elapsedTime < moveDuration; elapsedTime += Time.deltaTime)
         {
-            gameOverMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, elapsedTime / moveDuration);
-            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / moveDuration;
+            gameOverMenu.anchoredPosition = Vector2.Lerp(startingPosition, targetPosition, t);
             yield return null;
         }
 

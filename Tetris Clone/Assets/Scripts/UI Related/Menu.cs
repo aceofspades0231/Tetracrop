@@ -1,6 +1,8 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class Menu : MonoBehaviour
@@ -19,6 +21,15 @@ public class Menu : MonoBehaviour
     [SerializeField]
     private Piece piece;
 
+    [SerializeField]
+    private GameObject offensiveWordsDetector;
+    private string[] offensiveWords = { "sex", "ass", "dik", "dic", "fuk", "fuc" };
+
+    [SerializeField]
+    private Button gameOverRestartButton;
+    [SerializeField]
+    private Button gameOverExitButton;
+
     private void Awake()
     {
         nameInput.characterLimit = 3;
@@ -27,7 +38,7 @@ public class Menu : MonoBehaviour
     private void Start()
     {
         mainMenu.SetActive(true);
-        pauseMenu.SetActive(false);       
+        pauseMenu.SetActive(false);
     }
 
     private void Update()
@@ -39,13 +50,18 @@ public class Menu : MonoBehaviour
                 PauseGame();
             }
         }
+
+        if (gameIsPaused)
+        {
+            CheckForOffensiveWord(nameInput.text);
+        }
     }    
 
     public void StartGame()
     {
         gameIsPaused = !gameIsPaused;
         mainMenu.SetActive(false);
-        highscoreDisplay.anchoredPosition = new Vector2(1920, 0);
+        highscoreDisplay.anchoredPosition = new Vector2(-1450, 0);
     }
 
     public void PauseGame()
@@ -74,17 +90,14 @@ public class Menu : MonoBehaviour
 
     public void RestartGame()
     {
-        if(nameInput.text != "")
-        {
-            string name = nameInput.text;
-            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
-        }
-        else
-        {
-            string name = "DEF";
-            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);            
-        }
+        string name;
 
+        if (nameInput.text != "")
+            name = nameInput.text;
+        else
+            name = "DEF";
+
+        highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
         SceneManager.LoadScene(0);
     }
 
@@ -95,17 +108,50 @@ public class Menu : MonoBehaviour
 
     public void ExitGame()
     {
+        string name;
+
         if (nameInput.text != "")
+            name = nameInput.text;
+        else
+            name = "DEF";
+
+        highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+        Application.Quit();
+    }
+
+    private void CheckForOffensiveWord(string input)
+    {
+        bool offensiveWordDetected = false;
+
+        foreach (string word in offensiveWords)
         {
-            string name = nameInput.text;
-            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
+            if (input.IndexOf(word, StringComparison.OrdinalIgnoreCase) >= 0)
+            {
+                Debug.Log("Offensive word detected: " + word);
+                offensiveWordDetected = true;
+                break; // Exit the loop if an offensive word is detected
+            }
+        }
+
+        if (offensiveWordDetected)
+        {
+            offensiveWordsDetector.SetActive(true);
+
+            gameOverRestartButton.interactable = false;
+            gameOverExitButton.interactable = false;
+
+            gameOverRestartButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
+            gameOverExitButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
         }
         else
         {
-            string name = "DEF";
-            highscoreTable.AddHighscoreEntry(piece.finalLevel, piece.finalScore, name);
-        }
+            offensiveWordsDetector.SetActive(false);
 
-        Application.Quit();
-    }    
+            gameOverRestartButton.interactable = true;
+            gameOverExitButton.interactable = true;
+
+            gameOverRestartButton.GetComponentInChildren<Image>().color = Color.white;
+            gameOverExitButton.GetComponentInChildren<Image>().color = Color.white;
+        }
+    }
 }

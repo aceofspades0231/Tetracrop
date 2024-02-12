@@ -59,10 +59,10 @@ public class HighscoreTable : MonoBehaviour
         // Set Background to be White when at odd numbers and Black at even numbers
         if(rank % 2 == 1)
         {
-            entryTransform.Find("BG").GetComponent<Image>().color = new Color(1, 1, 1, 0.25f); ;
+            entryTransform.Find("BG").GetComponent<Image>().color = new Color(1, 1, 1, 0.25f);
         }            
         else
-            entryTransform.Find("BG").GetComponent<Image>().color = new Color(0, 0, 0, 0.25f); ;
+            entryTransform.Find("BG").GetComponent<Image>().color = new Color(0, 0, 0, 0.25f);
 
         switch (rank)
         {
