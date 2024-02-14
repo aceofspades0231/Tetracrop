@@ -3,9 +3,6 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Audio;
-using System.Threading;
-using UnityEditor;
 
 public class Options : MonoBehaviour
 {
