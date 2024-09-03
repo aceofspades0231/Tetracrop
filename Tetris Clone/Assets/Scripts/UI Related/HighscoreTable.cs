@@ -60,26 +60,34 @@ public class HighscoreTable : MonoBehaviour
         {
             default:
                 rankString = rank + "TH";
+                entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().color = new Color(0.60f, 0.40f, 0.20f);
+                entryTransform.Find("Level Text").GetComponent<TextMeshProUGUI>().color = new Color(0.60f, 0.40f, 0.20f);
+                entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().color = new Color(0.60f, 0.40f, 0.20f);
+                entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().color = new Color(0.60f, 0.40f, 0.20f);
                 break;
 
             case 1: 
                 rankString = "1ST";
                 entryTransform.Find("RankGold").gameObject.SetActive(true);
+                entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().color = new Color(1f, 0.84f, 0f);
+                entryTransform.Find("Level Text").GetComponent<TextMeshProUGUI>().color = new Color(1f, 0.84f, 0f);
+                entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().color = new Color(1f, 0.84f, 0f);
+                entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().color = new Color(1f, 0.84f, 0f);
                 break;
             case 2: rankString = "2ND";
                 entryTransform.Find("RankSilver").gameObject.SetActive(true);
+                entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().color = new Color(0.75f, 0.75f, 0.75f);
+                entryTransform.Find("Level Text").GetComponent<TextMeshProUGUI>().color = new Color(0.75f, 0.75f, 0.75f);
+                entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().color = new Color(0.75f, 0.75f, 0.75f);
+                entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().color = new Color(0.75f, 0.75f, 0.75f);
                 break;
             case 3: rankString = "3RD";
                 entryTransform.Find("RankBronze").gameObject.SetActive(true);
+                entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().color = new Color(0.80f, 0.50f, 0.20f);
+                entryTransform.Find("Level Text").GetComponent<TextMeshProUGUI>().color = new Color(0.80f, 0.50f, 0.20f);
+                entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().color = new Color(0.80f, 0.50f, 0.20f);
+                entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().color = new Color(0.80f, 0.50f, 0.20f);
                 break;
-        }
-
-        if (rank == 1)
-        {
-            entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().color = ColorUtility.TryParseHtmlString("#FFD700", out Color gold) ? gold : Color.white;
-            entryTransform.Find("Level Text").GetComponent<TextMeshProUGUI>().color = ColorUtility.TryParseHtmlString("#FFD700", out gold) ? gold : Color.white;
-            entryTransform.Find("Score Text").GetComponent<TextMeshProUGUI>().color = ColorUtility.TryParseHtmlString("#FFD700", out gold) ? gold : Color.white;
-            entryTransform.Find("Name Text").GetComponent<TextMeshProUGUI>().color = ColorUtility.TryParseHtmlString("#FFD700", out gold) ? gold : Color.white;
         }
 
         entryTransform.Find("Position Text").GetComponent<TextMeshProUGUI>().text = rankString;
