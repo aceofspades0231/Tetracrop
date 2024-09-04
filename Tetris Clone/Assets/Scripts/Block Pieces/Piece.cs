@@ -232,8 +232,8 @@ public class Piece : MonoBehaviour
 
         while (Move(Vector2Int.down)) 
         {
-            score += 10;
-            continue;
+            score += 10;            
+            continue;            
         }
 
         Lock();

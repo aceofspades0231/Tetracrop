@@ -35,7 +35,7 @@ public class HighscoreTable : MonoBehaviour
         }
 
         //  Sort the Highest to Lowest scores
-        highscores.highscoreEntryList = highscores.highscoreEntryList.OrderByDescending(entry => entry.score).Take(50).ToList();
+        highscores.highscoreEntryList = highscores.highscoreEntryList.OrderByDescending(entry => entry.score).Take(20).ToList();
 
         highscoreEntryTransformList = new List<Transform>();
         foreach (HighscoreEntry entry in highscores.highscoreEntryList)
