@@ -35,32 +35,24 @@ public class Piece : MonoBehaviour
 
     [Header("SFX")]
     // Plays sound effect
-    [SerializeField]
-    private AudioClip soundClip;
-    [SerializeField]
-    private AudioSource audioSource;
+    [SerializeField] private AudioClip soundClip;
+    [SerializeField] private AudioSource audioSource;
 
     private float speedMultiplier = 0.5f;
     private float currentStepDelay;
 
     [Header("UI Display")]
-    [SerializeField]
-    private TextMeshProUGUI gameLevelText;
-    [SerializeField]
-    private TextMeshProUGUI gameScoreText;
+    [SerializeField] private TextMeshProUGUI gameLevelText;
+    [SerializeField] private TextMeshProUGUI gameScoreText;
 
-    [SerializeField]
-    private TextMeshProUGUI finalLevelText;
-    [SerializeField]
-    private TextMeshProUGUI finalScoreText;
+    [SerializeField] private TextMeshProUGUI finalLevelText;
+    [SerializeField] private TextMeshProUGUI finalScoreText;
     
     private int checkOnce = 0;
 
     [Header("Movement Press")]
-    [SerializeField]
-    private float moveCooldown = 0.2f; // Adjust this value to change the movement speed
-    [SerializeField]
-    private float nextMoveTime = 0f;
+    [SerializeField] private float moveCooldown = 0.2f; // Adjust this value to change the movement speed
+    [SerializeField] private float nextMoveTime = 0f;
 
     public void Initialized(Gameboard board, Vector3Int spawnPosition, TetrominoData data)
     {
