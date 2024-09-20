@@ -11,17 +11,17 @@ Email: ajpv0231@gmail.com
 
 - Unity Technologies for the amazing game development platform.
 
-- To Zigurous (https://www.youtube.com/@Zigurous; https://www.youtube.com/watch?v=ODLzYI4d-J8) for a great tutorial for the classic Tetris gameplay.
+- Zigurous (https://www.youtube.com/@Zigurous; https://www.youtube.com/watch?v=ODLzYI4d-J8) for a great tutorial for the classic Tetris gameplay.
 
-- To TeruTeruSky (https://www.youtube.com/@TeruTeruSky; https://www.youtube.com/watch?v=DKUeAI79ujM) for a great Lo-fi remix of the classic Tetris game.
+- TeruTeruSky (https://www.youtube.com/@TeruTeruSky; https://www.youtube.com/watch?v=DKUeAI79ujM) for a great Lo-fi remix of the classic Tetris game.
 
 - Minecraft and Gamer's Paradise (https://www.youtube.com/@BestGamingSoundEffects; https://www.youtube.com/watch?v=nj8VCWIb7D4) for providing a sound effect for the movement of the pieces.
 
-- To Denis (https://www.youtube.com/@DenisWASD; https://www.youtube.com/watch?v=YKTjVACAfqE) for providing a great Shader for a simple Background UI blur.
+- Denis (https://www.youtube.com/@DenisWASD; https://www.youtube.com/watch?v=YKTjVACAfqE) for providing a great Shader for a simple Background UI blur.
 
-- To Awesome dude’s Sound Effects (https://www.youtube.com/@awesomedudessoundeffects8489; https://www.youtube.com/watch?v=SPUpsb_L6Z4) for providing a sound effect for the clearing of lines.
+- Awesome dude’s Sound Effects (https://www.youtube.com/@awesomedudessoundeffects8489; https://www.youtube.com/watch?v=SPUpsb_L6Z4) for providing a sound effect for the clearing of lines.
 
-- To Code Monkey (https://www.youtube.com/@CodeMonkeyUnity; https://www.youtube.com/watch?v=iAbaqGYdnyI) for providing a great tutorial for creating a Highscore Table.
+- Code Monkey (https://www.youtube.com/@CodeMonkeyUnity; https://www.youtube.com/watch?v=iAbaqGYdnyI) for providing a great tutorial for creating a Highscore Table.
 
 == Contact Information ==
 

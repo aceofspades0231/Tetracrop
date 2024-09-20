@@ -22,7 +22,7 @@ public class Menu : MonoBehaviour
 
     [SerializeField]
     private GameObject offensiveWordsDetector;
-    private string[] offensiveWords = { "sex", "ass", "dik", "dic", "fuk", "fuc" };
+    private string[] offensiveWords = { "sex", "ass", "ars", "dik", "dic", "fuk", "fuc" };
 
     [SerializeField]
     private Button gameOverRestartButton;
@@ -118,7 +118,7 @@ public class Menu : MonoBehaviour
         Application.Quit();
     }
 
-    private void CheckForOffensiveWord(string input)
+    private bool CheckForOffensiveWord(string input)
     {
         bool offensiveWordDetected = false;
 
@@ -141,6 +141,8 @@ public class Menu : MonoBehaviour
 
             gameOverRestartButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
             gameOverExitButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
+
+            return false;
         }
         else
         {
@@ -151,6 +153,8 @@ public class Menu : MonoBehaviour
 
             gameOverRestartButton.GetComponentInChildren<Image>().color = Color.white;
             gameOverExitButton.GetComponentInChildren<Image>().color = Color.white;
+
+            return true;
         }
     }
 }
