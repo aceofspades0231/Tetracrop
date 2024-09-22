@@ -180,7 +180,7 @@ public class Gameboard : MonoBehaviour
         // Clears whole line
         for (int col = bounds.xMin; col < bounds.xMax; col++)
         {
-            Vector3Int position = new Vector3Int(col, row, 0);
+            Vector3Int position = new Vector3Int(col, row, 0);            
             tilemap.SetTile(position, null);
         }
 

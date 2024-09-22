@@ -55,7 +55,7 @@ public class Options : MonoBehaviour
     {
         //Register Slider Events
         musicVolume.onValueChanged.AddListener(delegate { changeMusicVolume(musicVolume.value); });
-        sfxVolume.onValueChanged.AddListener(delegate { changesfxVolume(sfxVolume.value); });
+        sfxVolume.onValueChanged.AddListener(delegate { changeSfxVolume(sfxVolume.value); });
     }
 
     private void LoadSettings()
@@ -76,7 +76,7 @@ public class Options : MonoBehaviour
         bgmSource.volume = musicVol;
         musicVolume.value = musicVol;
 
-        changesfxVolume(sfxVol);
+        changeSfxVolume(sfxVol);
         movementSource.volume = sfxVol;
         clearLineSource.volume = sfxVol;
         sfxVolume.value = sfxVol;
@@ -106,7 +106,7 @@ public class Options : MonoBehaviour
         PlayerPrefs.SetFloat("MusicVolume", sliderValue);
     }
 
-    private void changesfxVolume(float sliderValue)
+    private void changeSfxVolume(float sliderValue)
     {
         movementSource.volume = sliderValue;
         clearLineSource.volume = sliderValue;

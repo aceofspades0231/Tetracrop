@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
     private Piece piece;
 
     [SerializeField]
-    private GameObject offensiveWordsDetector;
+    private TMP_Text nameWarningText;
     private string[] offensiveWords = { "sex", "ass", "ars", "dik", "dic", "fuk", "fuc" };
 
     [SerializeField]
@@ -52,7 +52,19 @@ public class Menu : MonoBehaviour
 
         if (gameIsPaused)
         {
-            CheckForOffensiveWord(nameInput.text);
+            if(nameInput.text.Length < 2)
+            {
+                nameWarningText.gameObject.SetActive(true);
+                nameWarningText.text = "Name is too short!";
+
+                gameOverRestartButton.interactable = false;
+                gameOverExitButton.interactable = false;
+
+                gameOverRestartButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
+                gameOverExitButton.GetComponentInChildren<Image>().color = new Color(1, 1, 1, 0.25f);
+            }
+            else
+                CheckForOffensiveWord(nameInput.text);
         }
     }    
 
@@ -134,7 +146,8 @@ public class Menu : MonoBehaviour
 
         if (offensiveWordDetected)
         {
-            offensiveWordsDetector.SetActive(true);
+            nameWarningText.gameObject.SetActive(true);
+            nameWarningText.text = "Can't use that Name";
 
             gameOverRestartButton.interactable = false;
             gameOverExitButton.interactable = false;
@@ -146,7 +159,7 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            offensiveWordsDetector.SetActive(false);
+            nameWarningText.gameObject.SetActive(false);
 
             gameOverRestartButton.interactable = true;
             gameOverExitButton.interactable = true;
